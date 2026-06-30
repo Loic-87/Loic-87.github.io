@@ -61,7 +61,7 @@ nav {
 }
 .hero-tag::before {
   content: "— ";
-  color: #5e5650;
+  color: #7a7268;
 }
 .hero-tag.secondary {
   color: #948f87;
@@ -124,7 +124,7 @@ nav {
   transition: all 0.2s;
 }
 .btn-ghost:hover {
-  border-color: #5e5650;
+  border-color: #7a7268;
 }
 
 section {
@@ -135,7 +135,7 @@ section {
 .section-num {
   font-family: "Space Grotesk", sans-serif;
   font-size: 13px;
-  color: #5e5650;
+  color: #7a7268;
   margin-bottom: 6px;
   font-weight: 600;
 }
@@ -165,7 +165,7 @@ section {
 }
 .skills-group-label {
   font-size: 11px;
-  color: #6b6660;
+  color: #8a857d;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   margin-bottom: 10px;
@@ -183,11 +183,11 @@ section {
   position: relative;
 }
 .skill-pill.coming {
-  color: #6b6660;
+  color: #8a857d;
 }
 .skill-pill.coming::before {
   content: "· ";
-  color: #5e5650;
+  color: #7a7268;
 }
 .skill-pill.acquired::before {
   content: "● ";
@@ -222,7 +222,7 @@ section {
   color: #b8a8d6;
 }
 .status-next {
-  color: #6b6660;
+  color: #8a857d;
 }
 .project-name {
   font-family: "Space Grotesk", sans-serif;
@@ -248,7 +248,7 @@ section {
 }
 .tech-tag {
   font-size: 12px;
-  color: #6b6660;
+  color: #8a857d;
 }
 .tech-tag::before {
   content: "/ ";
@@ -311,7 +311,7 @@ section {
 }
 .contact-label {
   font-size: 11px;
-  color: #6b6660;
+  color: #8a857d;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 6px;
@@ -330,7 +330,7 @@ section {
 footer {
   padding: 44px 2.5rem 50px;
   font-size: 12px;
-  color: #5e5650;
+  color: #7a7268;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -342,6 +342,6 @@ footer {
 .footer-tag {
   font-family: "Caveat", cursive;
   font-size: 19px;
-  color: #5e5650;
+  color: #7a7268;
   transform: rotate(-1.5deg);
 }
