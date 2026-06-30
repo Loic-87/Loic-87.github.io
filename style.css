@@ -61,7 +61,7 @@ nav {
 }
 .hero-tag::before {
   content: "— ";
-  color: #7a7268;
+  color: #9a948a;
 }
 .hero-tag.secondary {
   color: #948f87;
@@ -135,7 +135,7 @@ section {
 .section-num {
   font-family: "Space Grotesk", sans-serif;
   font-size: 13px;
-  color: #7a7268;
+  color: #9a948a;
   margin-bottom: 6px;
   font-weight: 600;
 }
@@ -342,6 +342,6 @@ footer {
 .footer-tag {
   font-family: "Caveat", cursive;
   font-size: 19px;
-  color: #7a7268;
+  color: #9a948a;
   transform: rotate(-1.5deg);
 }
