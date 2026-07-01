@@ -4,69 +4,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loïc LE FAUCHEUR — Développeur Web & Web Mobile</title>
+  <title>Loïc Le Faucheur — Développeur Web & Web Mobile</title>
   <meta name="description"
-    content="Portfolio de Loïc Le Faucheur, développeur web en formation DWWM à Limoges. Projets front-end et back-end, compétences techniques, et recherche de stage.">
+    content="Portfolio de Loïc Le Faucheur, développeur web en formation DWWM à Limoges. À propos, compétences, projets, parcours et contact.">
+  <meta name="theme-color" content="#0b0a12">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600&display=swap">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600&display=swap"
-    media="print" onload="this.media='all'">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Applique le thème enregistré avant le rendu (évite le clignotement)
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    } catch (e) {}
+  </script>
 </head>
 
 <body>
 
-  <main>
-    <nav>
-      <span class="nav-logo">LF</span>
-      <div class="nav-links">
+  <!-- Écran de lancement -->
+  <div class="splash" id="splash" aria-hidden="true">
+    <span class="splash-logo">LF</span>
+  </div>
+
+  <!-- Barre de progression de lecture -->
+  <div class="scroll-progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Lueur qui suit la souris -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Décor d'arrière-plan : halos dégradés + grille -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="grid-overlay"></span>
+  </div>
+
+  <nav id="nav">
+    <a href="#top" class="nav-logo">LF</a>
+    <div class="nav-right">
+      <div class="nav-links" id="nav-links">
+        <a href="#apropos">À propos</a>
         <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
-        <a href="#futur">À venir</a>
+        <a href="#parcours">Parcours</a>
         <a href="#contact">Contact</a>
       </div>
-    </nav>
-
-    <div class="hero">
-      <div class="hero-tags">
-        <span class="hero-tag">Formation DWWM, GRETA du Limousin · 2 mars — 4 décembre 2026</span>
-        <span class="hero-tag secondary">— En parallèle avec OpenClassrooms</span>
-      </div>
-      <h1>Loïc Le Faucheur</h1>
-      <span class="scribble">dev web en formation, et ça matche bien avec moi</span>
-      <p>Je me suis lancé dans le dev web en reconversion — un domaine qui colle bien avec ce qui m'a toujours branché :
-        le jeu vidéo, la tech, comprendre comment les trucs fonctionnent. Ce que je préfère ? Mettre les mains dans le
-        cambouis, debugger jusqu'à ce que ça marche, et apprendre un nouveau truc presque chaque semaine.</p>
-      <div class="hero-btns">
-        <a href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer" class="btn-primary">Voir mon
-          GitHub</a>
-        <a href="#contact" class="btn-ghost">Me contacter</a>
-      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le thème clair/sombre">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <hr class="divider">
+  <main id="top">
 
+    <header class="hero">
+      <div class="hero-avatar reveal" aria-hidden="true">
+        <span>LF</span>
+      </div>
+
+      <div class="hero-tags reveal">
+        <span class="hero-tag"><span class="dot"></span>Disponible pour un stage · août 2026</span>
+        <span class="hero-tag secondary">Formation DWWM · GRETA du Limousin</span>
+      </div>
+
+      <h1 class="reveal">Loïc <span class="gradient-text">Le Faucheur</span></h1>
+
+      <p class="hero-role reveal">
+        Développeur <span class="rotator" id="rotator" aria-live="polite">web</span>
+      </p>
+
+      <p class="scribble reveal">dev web en formation, et ça matche bien avec moi</p>
+
+      <p class="hero-intro reveal">Je me suis lancé dans le dev web en reconversion — un domaine qui colle bien avec ce
+        qui m'a toujours branché : le jeu vidéo, la tech, comprendre comment les trucs fonctionnent. Ce que je
+        préfère ? Mettre les mains dans le cambouis, debugger jusqu'à ce que ça marche, et apprendre un nouveau truc
+        presque chaque semaine.</p>
+
+      <div class="hero-btns reveal">
+        <a href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Voir mon
+          GitHub</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+        <!-- TODO Loïc : le bouton s'activera dès que "cv-loic-le-faucheur.pdf" sera déposé dans le dossier du site -->
+        <a href="cv-loic-le-faucheur.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Mon CV (PDF)</a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">projets réalisés</span></div>
+        <div class="stat"><span class="stat-num">9+</span><span class="stat-label">compétences acquises</span></div>
+        <div class="stat"><span class="stat-num">2026</span><span class="stat-label">DWWM en cours</span></div>
+        <div class="stat"><span class="stat-num">Limoges</span><span class="stat-label">France</span></div>
+      </div>
+    </header>
+
+    <div class="section-divider reveal" aria-hidden="true"><span></span></div>
+
+    <!-- ================= À PROPOS ================= -->
+    <section id="apropos">
+      <div class="section-head reveal">
+        <p class="section-num">01</p>
+        <h2 class="section-title">À propos</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>En reconversion vers le développement web, j'ai trouvé un terrain de jeu qui réunit tout ce qui m'a
+            toujours plu : la logique, la tech, et l'envie de comprendre comment les choses fonctionnent sous le capot.</p>
+          <p>J'aime apprendre vite, tester, casser, réparer — et livrer des interfaces propres, accessibles et bien
+            fichues. Aujourd'hui, je cherche un <strong>stage</strong> (puis une alternance) pour mettre tout ça en
+            pratique sur des projets réels, aux côtés de gens qui savent.</p>
+          <!-- TODO Loïc : personnalise ce bloc — d'où tu viens (métier précédent), ce que tu fais en dehors du code, etc. -->
+        </div>
+
+        <ul class="about-facts reveal">
+          <li>
+            <span class="fact-label">Formation</span>
+            <span class="fact-value">DWWM · GRETA du Limousin <span class="fact-plus">+ OpenClassrooms</span></span>
+          </li>
+          <li>
+            <span class="fact-label">Localisation</span>
+            <span class="fact-value">Limoges, France</span>
+          </li>
+          <li>
+            <span class="fact-label">Objectif</span>
+            <span class="fact-value">Stage → alternance full-stack</span>
+          </li>
+          <li>
+            <span class="fact-label">Ce qui m'anime</span>
+            <span class="fact-value">Jeu vidéo, tech, résolution de problèmes</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="section-divider reveal" aria-hidden="true"><span></span></div>
+
+    <!-- ================= COMPÉTENCES ================= -->
     <section id="competences">
-      <p class="section-num">01</p>
-      <h2 class="section-title">Compétences</h2>
-      <div class="skills-group">
-        <p class="skills-group-label">Acquises</p>
+      <div class="section-head reveal">
+        <p class="section-num">02</p>
+        <h2 class="section-title">Compétences</h2>
+      </div>
+      <p class="section-sub reveal">Niveau : <span class="lvl inline"><i class="on"></i></span> notions ·
+        <span class="lvl inline"><i class="on"></i><i class="on"></i></span> en pratique ·
+        <span class="lvl inline"><i class="on"></i><i class="on"></i><i class="on"></i></span> à l'aise.
+        <!-- TODO Loïc : ajuste librement les niveaux ci-dessous (le nombre de <i class="on">). -->
+      </p>
+
+      <div class="skills-cat reveal">
+        <p class="skills-group-label">Bases &amp; langages</p>
         <div class="skills-grid">
-          <span class="skill-pill acquired">HTML5</span>
-          <span class="skill-pill acquired">CSS3</span>
-          <span class="skill-pill acquired">Git / GitHub</span>
-          <span class="skill-pill acquired">JavaScript ES6</span>
-          <span class="skill-pill acquired">Bootstrap</span>
-          <span class="skill-pill acquired">MySQL</span>
-          <span class="skill-pill acquired">Accessibilité</span>
-          <span class="skill-pill acquired">SEO / Lighthouse</span>
-          <span class="skill-pill acquired">REST API</span>
+          <span class="skill-pill acquired">HTML5<span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i></span></span>
+          <span class="skill-pill acquired">CSS3<span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i></span></span>
+          <span class="skill-pill acquired">JavaScript ES6<span class="lvl"><i class="on"></i><i class="on"></i><i></i></span></span>
+          <span class="skill-pill acquired">Git / GitHub<span class="lvl"><i class="on"></i><i class="on"></i><i></i></span></span>
         </div>
       </div>
-      <div class="skills-group">
+
+      <div class="skills-cat reveal">
+        <p class="skills-group-label">Front-end &amp; qualité</p>
+        <div class="skills-grid">
+          <span class="skill-pill acquired">Bootstrap<span class="lvl"><i class="on"></i><i class="on"></i><i></i></span></span>
+          <span class="skill-pill acquired">Accessibilité<span class="lvl"><i class="on"></i><i class="on"></i><i></i></span></span>
+          <span class="skill-pill acquired">SEO / Lighthouse<span class="lvl"><i class="on"></i><i class="on"></i><i></i></span></span>
+        </div>
+      </div>
+
+      <div class="skills-cat reveal">
+        <p class="skills-group-label">Back-end &amp; données</p>
+        <div class="skills-grid">
+          <span class="skill-pill acquired">MySQL<span class="lvl"><i class="on"></i><i></i><i></i></span></span>
+          <span class="skill-pill acquired">REST API<span class="lvl"><i class="on"></i><i class="on"></i><i></i></span></span>
+        </div>
+      </div>
+
+      <div class="skills-cat reveal">
         <p class="skills-group-label">À venir</p>
         <div class="skills-grid">
           <span class="skill-pill coming">Node.js</span>
@@ -75,138 +201,267 @@
       </div>
     </section>
 
-    <hr class="divider">
+    <div class="section-divider reveal" aria-hidden="true"><span></span></div>
 
+    <!-- ================= PROJETS ================= -->
     <section id="projets">
-      <p class="section-num">02</p>
-      <h2 class="section-title">Projets de formation</h2>
-      <p class="section-sub">Tous les projets du parcours DWWM, dans l'ordre, du premier au dernier.</p>
+      <div class="section-head reveal">
+        <p class="section-num">03</p>
+        <h2 class="section-title">Projets de formation</h2>
+      </div>
+      <p class="section-sub reveal">Tous les projets du parcours DWWM, dans l'ordre, du premier au dernier.</p>
+
       <div class="projects-list">
 
-        <div class="project-row">
-          <span class="project-status status-done">Validé</span>
-          <div>
-            <p class="project-name">Agence de voyage</p>
+        <article class="project-card reveal">
+          <!-- TODO Loïc : mets ici l'URL du repo du projet -->
+          <a class="card-link" href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer"
+            aria-label="Projet Agence de voyage sur GitHub"></a>
+          <!-- TODO Loïc : remplace .project-thumb par <img class="project-shot" src="captures/agence-voyage.png" alt="Aperçu Agence de voyage"> -->
+          <div class="project-thumb" data-initial="A">
+            <div class="thumb-bar"><span></span><span></span><span></span></div>
+            <span class="thumb-ph">capture à venir</span>
+          </div>
+          <div class="project-body">
+            <span class="project-status status-done">Validé</span>
+            <h3 class="project-name">Agence de voyage</h3>
             <p class="project-desc">Intégration responsive d'une page d'accueil. Premier projet front-end complet, HTML
               sémantique et CSS structuré.</p>
-            <div class="tech-tags"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span
-                class="tech-tag">Responsive</span></div>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span
+                class="tech-tag">Responsive</span>
+            </div>
+            <div class="project-actions">
+              <!-- TODO Loïc : URL du repo et de la démo -->
+              <a class="btn-sm solid" href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer">Code →</a>
+              <a class="btn-sm" href="#" target="_blank" rel="noopener noreferrer">Live →</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-row">
-          <span class="project-status status-realized">Réalisé</span>
-          <div>
-            <p class="project-name">Sophie Bluel</p>
+        <article class="project-card reveal">
+          <a class="card-link" href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer"
+            aria-label="Projet Sophie Bluel sur GitHub"></a>
+          <!-- TODO Loïc : remplace .project-thumb par <img class="project-shot" src="captures/sophie-bluel.png" alt="Aperçu Sophie Bluel"> -->
+          <div class="project-thumb" data-initial="S">
+            <div class="thumb-bar"><span></span><span></span><span></span></div>
+            <span class="thumb-ph">capture à venir</span>
+          </div>
+          <div class="project-body">
+            <span class="project-status status-realized">Réalisé</span>
+            <h3 class="project-name">Sophie Bluel</h3>
             <p class="project-desc">Portfolio d'architecte d'intérieur. Galerie dynamique, authentification JWT, mode
               admin avec ajout/suppression de photos. Connexion à une API REST locale. Soutenance à planifier.</p>
-            <div class="tech-tags"><span class="tech-tag">JavaScript ES6</span><span class="tech-tag">REST
-                API</span><span class="tech-tag">JWT</span></div>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript ES6</span><span class="tech-tag">REST API</span><span
+                class="tech-tag">JWT</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn-sm solid" href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer">Code →</a>
+              <a class="btn-sm" href="#" target="_blank" rel="noopener noreferrer">Live →</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-row">
-          <span class="project-status status-realized">Réalisé</span>
-          <div>
-            <p class="project-name">Nina Carducci</p>
+        <article class="project-card reveal">
+          <a class="card-link" href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer"
+            aria-label="Projet Nina Carducci sur GitHub"></a>
+          <!-- TODO Loïc : remplace .project-thumb par <img class="project-shot" src="captures/nina-carducci.png" alt="Aperçu Nina Carducci"> -->
+          <div class="project-thumb" data-initial="N">
+            <div class="thumb-bar"><span></span><span></span><span></span></div>
+            <span class="thumb-ph">capture à venir</span>
+          </div>
+          <div class="project-body">
+            <span class="project-status status-realized">Réalisé</span>
+            <h3 class="project-name">Nina Carducci</h3>
             <p class="project-desc">Débogage et optimisation d'un site de photographe existant. Scores Lighthouse ciblés
               à 90%+ sur toutes les catégories.</p>
-            <div class="tech-tags"><span class="tech-tag">SEO</span><span class="tech-tag">Accessibilité</span><span
-                class="tech-tag">Lighthouse</span><span class="tech-tag">Bootstrap</span></div>
+            <div class="tech-tags">
+              <span class="tech-tag">SEO</span><span class="tech-tag">Accessibilité</span><span
+                class="tech-tag">Lighthouse</span><span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn-sm solid" href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer">Code →</a>
+              <a class="btn-sm" href="#" target="_blank" rel="noopener noreferrer">Live →</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-row">
+      </div>
+
+      <p class="skills-group-label upcoming-label reveal">À venir dans le parcours</p>
+      <div class="upcoming-list">
+        <article class="upcoming-row reveal">
           <span class="project-status status-next">À venir</span>
           <div>
-            <p class="project-name muted">Application de location immobilière</p>
-            <p class="project-desc">React</p>
+            <h3 class="project-name sm">Application de location immobilière</h3>
+            <div class="tech-tags"><span class="tech-tag">React</span></div>
           </div>
-        </div>
-
-        <div class="project-row">
+        </article>
+        <article class="upcoming-row reveal">
           <span class="project-status status-next">À venir</span>
           <div>
-            <p class="project-name muted">Site de notation de livres</p>
-            <p class="project-desc">Back-end, Node.js / Express</p>
+            <h3 class="project-name sm">Site de notation de livres</h3>
+            <div class="tech-tags"><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span></div>
           </div>
-        </div>
-
-        <div class="project-row">
+        </article>
+        <article class="upcoming-row reveal">
           <span class="project-status status-next">À venir</span>
           <div>
-            <p class="project-name muted">Site client</p>
-            <p class="project-desc">Planification et développement pour un client</p>
+            <h3 class="project-name sm">Site client</h3>
+            <p class="project-desc sm">Planification et développement pour un client réel.</p>
           </div>
-        </div>
-
-        <div class="project-row">
+        </article>
+        <article class="upcoming-row reveal">
           <span class="project-status status-next">À venir</span>
           <div>
-            <p class="project-name muted">Portfolio de développeur</p>
-            <p class="project-desc">Projet final de certification</p>
+            <h3 class="project-name sm">Portfolio de développeur</h3>
+            <p class="project-desc sm">Projet final de certification.</p>
           </div>
-        </div>
-
+        </article>
       </div>
     </section>
 
-    <hr class="divider">
+    <div class="section-divider reveal" aria-hidden="true"><span></span></div>
 
-    <section id="futur">
-      <p class="section-num">03</p>
-      <h2 class="section-title">Et après</h2>
-      <p class="section-sub">Ce que je vise une fois le DWWM en poche.</p>
-      <div class="future-grid">
-        <div class="future-row">
-          <span class="future-label">Cursus</span>
-          <div>
-            <p class="future-title">Poursuite en alternance</p>
-            <p class="future-desc">Continuer à apprendre sur le terrain, en visant principalement le full-stack.</p>
-          </div>
-        </div>
-        <div class="future-row">
-          <span class="future-label">Spécialisation</span>
-          <div>
-            <p class="future-title">Encore en réflexion</p>
-            <p class="future-desc">Pas encore tranché — la cyber m'attire, mais je reste ouvert selon ce que je découvre
-              en cours de route.</p>
-          </div>
-        </div>
+    <!-- ================= PARCOURS (timeline) ================= -->
+    <section id="parcours">
+      <div class="section-head reveal">
+        <p class="section-num">04</p>
+        <h2 class="section-title">Parcours</h2>
       </div>
+      <p class="section-sub reveal">De la reconversion à l'objectif full-stack.</p>
+
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <span class="tl-date">Avant 2026</span>
+            <h3 class="tl-title">Le déclic reconversion</h3>
+            <p class="tl-desc">Après un premier parcours, j'ai fait le choix de me réorienter vers le développement web
+              — un métier qui correspond à ma façon de réfléchir et d'apprendre.</p>
+            <!-- TODO Loïc : précise ton parcours d'avant (métier / secteur) si tu veux. -->
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <span class="tl-date">Mars 2026</span>
+            <h3 class="tl-title">Début du DWWM</h3>
+            <p class="tl-desc">Entrée en formation Développeur Web &amp; Web Mobile au GRETA du Limousin, en parallèle
+              du parcours OpenClassrooms.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal upcoming">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <span class="tl-date">Août — Oct 2026</span>
+            <h3 class="tl-title">Stage en entreprise</h3>
+            <p class="tl-desc">Première immersion professionnelle : 31 août — 30 octobre 2026.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal upcoming">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <span class="tl-date">Déc 2026</span>
+            <h3 class="tl-title">Certification DWWM</h3>
+            <p class="tl-desc">Fin de formation et passage de la certification (titre professionnel).</p>
+          </div>
+        </li>
+        <li class="tl-item reveal upcoming">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <span class="tl-date">Ensuite</span>
+            <h3 class="tl-title">Alternance full-stack</h3>
+            <p class="tl-desc">Continuer à apprendre sur le terrain, en visant principalement le full-stack.</p>
+          </div>
+        </li>
+        <li class="tl-item reveal upcoming">
+          <span class="tl-dot"></span>
+          <div class="tl-content">
+            <span class="tl-date">Plus tard</span>
+            <h3 class="tl-title">Spécialisation</h3>
+            <p class="tl-desc">Encore en réflexion — la cyber m'attire, mais je reste ouvert selon ce que je découvre en
+              route.</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <hr class="divider">
+    <div class="section-divider reveal" aria-hidden="true"><span></span></div>
 
+    <!-- ================= CONTACT ================= -->
     <section id="contact">
-      <p class="section-num">04</p>
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-grid">
-        <a href="mailto:loic.lf87@gmail.com" class="contact-cell">
-          <p class="contact-label">Email</p>
-          <p class="contact-value accent">loic.lf87@gmail.com</p>
-        </a>
-        <a href="https://github.com/Loic-87" target="_blank" rel="noopener noreferrer" class="contact-cell">
-          <p class="contact-label">GitHub</p>
-          <p class="contact-value accent">github.com/Loic-87</p>
-        </a>
-        <div class="contact-cell">
-          <p class="contact-label">Localisation</p>
-          <p class="contact-value">Limoges, France</p>
-        </div>
-        <div class="contact-cell">
-          <p class="contact-label">Dates de stage</p>
-          <p class="contact-value">31 août — 30 octobre 2026</p>
-        </div>
+      <div class="section-head reveal">
+        <p class="section-num">05</p>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <p class="section-sub reveal">Ouvert aux opportunités de stage et aux échanges. Écris-moi, je réponds vite.</p>
+
+      <div class="contact-layout">
+        <!-- Formulaire (sans serveur : ouvre ton client mail) -->
+        <!-- TODO Loïc : pour un vrai envoi automatique, crée un endpoint Formspree (https://formspree.io)
+             et remplace le comportement mailto par action="https://formspree.io/f/xxxx" method="POST". -->
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-name">Nom</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Ton nom">
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="ton@email.com">
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="Ton message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer →</button>
+          <p class="form-hint" id="form-hint">Ce bouton ouvre ton logiciel de mail avec le message pré-rempli.</p>
+        </form>
+
+        <!-- Coordonnées -->
+        <ul class="contact-info reveal">
+          <li>
+            <span class="contact-label">Email</span>
+            <a class="contact-value accent" href="mailto:loic.lf87@gmail.com">loic.lf87@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a class="contact-value accent" href="https://github.com/Loic-87" target="_blank"
+              rel="noopener noreferrer">github.com/Loic-87</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a class="contact-value accent" href="https://www.linkedin.com/in/lo%C3%AFc-le-faucheur-14a5023b4/"
+              target="_blank" rel="noopener noreferrer">Loïc Le Faucheur</a>
+          </li>
+          <li>
+            <span class="contact-label">CV</span>
+            <!-- TODO Loïc : dépose ton fichier PDF nommé exactement "cv-loic-le-faucheur.pdf"
+                 dans le dossier Loic-87.github.io/ — le lien fonctionnera alors tout seul. -->
+            <a class="contact-value accent" href="cv-loic-le-faucheur.pdf" target="_blank"
+              rel="noopener noreferrer">Voir mon CV (PDF) →</a>
+          </li>
+          <li>
+            <span class="contact-label">Localisation</span>
+            <span class="contact-value">Limoges, France</span>
+          </li>
+          <li>
+            <span class="contact-label">Dates de stage</span>
+            <span class="contact-value">31 août — 30 octobre 2026</span>
+          </li>
+        </ul>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <span>Loïc Le Faucheur · Développeur Web & Web Mobile</span>
+    <span>Loïc Le Faucheur · Développeur Web &amp; Web Mobile</span>
     <span class="footer-tag">404 burnout not found</span>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 
 </html>
