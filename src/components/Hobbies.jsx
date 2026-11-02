@@ -1,6 +1,8 @@
+import FadeInSection from './FadeInSection'
+
 function Hobbies() {
   return (
-    <section id="hobbies" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection id="hobbies" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">
         Hobbies tech
       </h2>
@@ -36,7 +38,7 @@ function Hobbies() {
           )}
         </ul>
       </div>
-    </section>
+    </FadeInSection>
   )
 }
 

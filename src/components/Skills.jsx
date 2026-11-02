@@ -1,3 +1,5 @@
+import FadeInSection from './FadeInSection'
+
 const HARD_SKILLS = {
   'Front-end': ['React', 'JavaScript (ES6+)', 'HTML5 sémantique', 'CSS3 / Sass', 'Tailwind CSS', 'Vite'],
   'Back-end': ['Node.js', 'Express', 'MongoDB', 'API REST', 'JWT'],
@@ -21,7 +23,7 @@ const SOFT_SKILLS = [
 
 function Skills() {
   return (
-    <section id="competences" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection id="competences" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">
         Compétences
       </h2>
@@ -61,7 +63,7 @@ function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </FadeInSection>
   )
 }
 

@@ -1,3 +1,5 @@
+import FadeInSection from './FadeInSection'
+
 const PITCH = [
   {
     label: 'Qui je suis',
@@ -27,7 +29,7 @@ const PITCH = [
 
 function About() {
   return (
-    <section id="apropos" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection id="apropos" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">
         À propos
       </h2>
@@ -42,7 +44,7 @@ function About() {
           </div>
         ))}
       </div>
-    </section>
+    </FadeInSection>
   )
 }
 

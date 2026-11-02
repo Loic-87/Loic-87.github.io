@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
+import FadeInSection from './FadeInSection'
 
 const FILTERS = ['Tous', 'Formation', 'Personnel']
 
@@ -13,16 +15,18 @@ function Projects() {
       : projects.filter((project) => project.category === activeFilter)
 
   return (
-    <section id="projets" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-24">
+    <FadeInSection id="projets" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">Projets</h2>
 
       <div className="mt-6 flex gap-3">
         {FILTERS.map((filter) => (
-          <button
+          <motion.button
             key={filter}
             type="button"
             onClick={() => setActiveFilter(filter)}
             aria-pressed={activeFilter === filter}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
               activeFilter === filter
                 ? 'border-primary bg-primary text-bg font-semibold'
@@ -30,16 +34,27 @@ function Projects() {
             }`}
           >
             {filter}
-          </button>
+          </motion.button>
         ))}
       </div>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.slug}
+              layout
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.25 }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
-    </section>
+    </FadeInSection>
   )
 }
 

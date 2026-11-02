@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const LINKS = [
   { href: '#accueil', label: 'Accueil' },
@@ -49,21 +50,30 @@ function Nav() {
       </nav>
 
       {/* Menu mobile */}
-      {isOpen && (
-        <ul id="menu-mobile" className="flex flex-col gap-4 px-6 pb-6 md:hidden">
-          {LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-text-muted hover:text-primary"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            id="menu-mobile"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-col gap-4 overflow-hidden px-6 pb-6 md:hidden"
+          >
+            {LINKS.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-text-muted hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

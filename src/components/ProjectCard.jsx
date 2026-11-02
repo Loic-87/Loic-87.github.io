@@ -1,6 +1,6 @@
 function ProjectCard({ project }) {
   return (
-    <article className="flex flex-col gap-3 rounded-xl border border-white/10 bg-bg-elevated p-5">
+    <article className="flex h-full flex-col gap-3 rounded-xl border border-white/10 bg-bg-elevated p-5 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
       <div className="flex items-start justify-between gap-2">
         <h3 className="font-display text-lg font-semibold">{project.title}</h3>
         <span className="shrink-0 rounded-full border border-primary/40 px-2.5 py-0.5 text-xs text-primary">

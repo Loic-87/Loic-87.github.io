@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import FadeInSection from './FadeInSection'
 
 const EMAIL = 'loic.lf87@gmail.com'
 
@@ -30,7 +32,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">
         Contact
       </h2>
@@ -81,12 +83,14 @@ function Contact() {
           />
         </div>
 
-        <button
+        <motion.button
           type="submit"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className="self-start rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
         >
           Envoyer
-        </button>
+        </motion.button>
       </form>
 
       <ul className="mt-10 flex gap-6 border-t border-white/10 pt-8">
@@ -103,7 +107,7 @@ function Contact() {
           </li>
         ))}
       </ul>
-    </section>
+    </FadeInSection>
   )
 }
 
