@@ -14,29 +14,52 @@ const SOCIAL_LINKS = [
   { label: 'Email', href: `mailto:${EMAIL}` },
 ]
 
+function encodeForNetlify(data) {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&')
+}
+
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
 
   function handleChange(event) {
     const { name, value } = event.target
     setFormData((previous) => ({ ...previous, [name]: value }))
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
+    setStatus('sending')
 
-    const subject = `Contact portfolio : ${formData.name}`
-    const body = `${formData.message}\n\nEnvoyé par ${formData.name} (${formData.email})`
-    const mailtoUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-
-    window.location.href = mailtoUrl
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeForNetlify({ 'form-name': 'contact', ...formData }),
+      })
+      setStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
     <FadeInSection id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
       <SectionHeading number="05" title="Contact" />
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <form
+        name="contact"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-5"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
+
         <div className="flex flex-col gap-1.5">
           <label htmlFor="name" className="font-mono text-xs tracking-wider text-primary uppercase">
             Nom
@@ -84,12 +107,28 @@ function Contact() {
 
         <motion.button
           type="submit"
+          disabled={status === 'sending'}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="self-start rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
+          className="self-start rounded-lg bg-primary px-6 py-3 font-semibold text-bg disabled:opacity-60"
         >
-          Envoyer
+          {status === 'sending' ? 'Envoi...' : 'Envoyer'}
         </motion.button>
+
+        {status === 'success' && (
+          <p className="text-sm font-semibold text-accent" role="status">
+            Message envoyé, je te réponds rapidement.
+          </p>
+        )}
+        {status === 'error' && (
+          <p className="text-sm font-semibold text-highlight" role="alert">
+            Le formulaire n'a pas pu être envoyé. Écris-moi directement à{' '}
+            <a href={`mailto:${EMAIL}`} className="underline">
+              {EMAIL}
+            </a>
+            .
+          </p>
+        )}
       </form>
 
       <ul className="mt-10 flex gap-6 border-t border-white/10 pt-8">
