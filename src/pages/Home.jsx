@@ -15,7 +15,7 @@ function Home() {
     if (!hash) return
 
     const element = document.querySelector(hash)
-    element?.scrollIntoView({ behavior: 'instant' })
+    element?.scrollIntoView({ behavior: 'smooth' })
   }, [hash])
 
   return (

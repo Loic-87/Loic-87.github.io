@@ -1,3 +1,10 @@
+import bookiImage from '../assets/projects/booki.jpg'
+import sophieBluelImage from '../assets/projects/sophie-bluel.jpg'
+import ninaCarducciImage from '../assets/projects/nina-carducci.jpg'
+import kasaImage from '../assets/projects/kasa.jpg'
+import demineurImage from '../assets/projects/demineur-antivirus.jpg'
+import comptoirMotoImage from '../assets/projects/comptoir-de-la-moto.jpg'
+
 export const projects = [
   {
     slug: 'booki',
@@ -6,6 +13,7 @@ export const projects = [
     stack: ['HTML5', 'CSS3'],
     blurb: "Intégration d'une maquette Figma en HTML/CSS pur, sans JavaScript.",
     repo: 'https://github.com/Loic-87/Booki-mon-projet',
+    image: bookiImage,
     contexte:
       "Premier projet de la formation : reproduire une maquette Figma à l'identique, en HTML/CSS pur, pour Booki, un site de recherche d'hébergements et d'activités de voyage.",
     objectifs:
@@ -25,6 +33,7 @@ export const projects = [
     stack: ['JavaScript', 'API REST'],
     blurb: 'Galerie dynamique avec mode édition protégé par authentification.',
     repo: 'https://github.com/Loic-87/Mon-projet-Sophie-Bluel',
+    image: sophieBluelImage,
     contexte:
       "Portfolio en ligne pour une architecte d'intérieur fictive, avec une interface d'admin pour ajouter ou supprimer des réalisations sans toucher au code.",
     objectifs:
@@ -45,6 +54,7 @@ export const projects = [
     stack: ['Performance', 'SEO', 'Accessibilité'],
     blurb: "Audit et optimisation perf/SEO/accessibilité d'un site existant.",
     repo: 'https://github.com/Loic-87/mon-projet-Nina-Carducci',
+    image: ninaCarducciImage,
     contexte:
       "Reprendre le site vitrine existant d'une photographe plutôt que de le construire de zéro, pour l'auditer et l'optimiser.",
     objectifs:
@@ -83,6 +93,7 @@ export const projects = [
     stack: ['React', 'React Router', 'Sass'],
     blurb: 'SPA de location de logements avec hooks personnalisés.',
     repo: 'https://github.com/Loic-87/Kasa-Mon-projet',
+    image: kasaImage,
     contexte:
       'Refonte en Single Page Application React de Kasa, une plateforme de location de logements entre particuliers.',
     objectifs:
@@ -123,6 +134,7 @@ export const projects = [
     stack: ['React', 'Vite'],
     blurb: 'Démineur réhabillé en antivirus, jouable au clic comme au tactile.',
     repo: 'https://github.com/Loic-87/demineur-antivirus',
+    image: demineurImage,
     contexte:
       "Projet perso pour m'exercer sur un algorithme classique, le démineur, en le réhabillant dans un univers antivirus : on scanne un système à la recherche de virus plutôt que de mines.",
     objectifs:
@@ -143,6 +155,7 @@ export const projects = [
     blurb: 'Site de petites annonces dédié à la moto, design system sur-mesure (stage).',
     repo: null,
     noRepoReason: 'Repo à venir',
+    image: comptoirMotoImage,
     contexte:
       "Projet de stage : un site de petites annonces façon Leboncoin, mais entièrement dédié à la moto. Un choix assumé, parce que je suis motard, pour donner une vraie identité au projet plutôt qu'un clone générique.",
     objectifs:

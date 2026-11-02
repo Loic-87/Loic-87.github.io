@@ -65,6 +65,14 @@ function ProjectDetail() {
         ))}
       </ul>
 
+      {project.image && (
+        <img
+          src={project.image}
+          alt={`Capture d'écran du projet ${project.title}`}
+          className="mt-8 w-full rounded-xl border border-white/10"
+        />
+      )}
+
       <div className="mt-10 flex flex-col gap-8">
         {FICHE_SECTIONS.map((section) => (
           <div key={section.key}>
