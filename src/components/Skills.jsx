@@ -21,7 +21,7 @@ const SOFT_SKILLS = [
 
 function Skills() {
   return (
-    <section id="competences" className="mx-auto max-w-3xl px-6 py-24">
+    <section id="competences" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">
         Compétences
       </h2>

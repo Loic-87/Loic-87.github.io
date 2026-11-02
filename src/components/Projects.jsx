@@ -13,7 +13,7 @@ function Projects() {
       : projects.filter((project) => project.category === activeFilter)
 
   return (
-    <section id="projets" className="mx-auto max-w-5xl px-6 py-24">
+    <section id="projets" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-24">
       <h2 className="font-display text-3xl font-bold md:text-4xl">Projets</h2>
 
       <div className="mt-6 flex gap-3">
