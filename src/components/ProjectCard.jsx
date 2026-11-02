@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import TechTag from './TechTag'
-import CategoryBadge from './CategoryBadge'
+import { Link } from "react-router-dom";
+import TechTag from "./TechTag";
+import CategoryBadge from "./CategoryBadge";
 
 function ProjectCard({ project }) {
   return (
@@ -15,7 +15,9 @@ function ProjectCard({ project }) {
 
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-display text-lg font-semibold">{project.title}</h3>
+          <h3 className="font-display text-lg font-semibold">
+            {project.title}
+          </h3>
           <CategoryBadge category={project.category} />
         </div>
 
@@ -51,7 +53,7 @@ function ProjectCard({ project }) {
         </div>
       </div>
     </article>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
