@@ -10,7 +10,7 @@ function Hobbies() {
       <div className="rounded-lg border border-dashed border-white/20 bg-bg-elevated/50 p-6">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-display text-lg font-semibold">
-            Broken Sunshine — conception d'un RPG
+            Broken Sunshine, conception d'un RPG
           </h3>
           <span className="shrink-0 rounded-full border border-highlight/40 bg-highlight/10 px-2.5 py-0.5 text-xs font-semibold text-highlight">
             En pause
@@ -19,7 +19,7 @@ function Hobbies() {
 
         <p className="mt-3 text-sm text-text-muted">
           Avec deux amis, je travaille par intermittence sur Broken Sunshine,
-          un RPG au tour par tour pensé pour Unity. Mon rôle : l'équilibrage —
+          un RPG au tour par tour pensé pour Unity. Mon rôle : l'équilibrage,
           construire les courbes de progression des personnages et valider
           mathématiquement que les écarts entre eux restent cohérents, plutôt
           que de les régler à l'instinct.

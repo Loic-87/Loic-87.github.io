@@ -25,7 +25,7 @@ function Hero() {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="relative max-w-xl text-lg text-text-muted"
       >
-        Développeur Full-Stack Junior — passionné de code, de gaming et de
+        Développeur Full-Stack Junior, passionné de code, de gaming et de
         moto.
       </motion.p>
       <motion.div

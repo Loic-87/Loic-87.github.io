@@ -25,8 +25,8 @@ function Contact() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    const subject = `Contact portfolio — ${formData.name}`
-    const body = `${formData.message}\n\n— ${formData.name} (${formData.email})`
+    const subject = `Contact portfolio : ${formData.name}`
+    const body = `${formData.message}\n\nEnvoyé par ${formData.name} (${formData.email})`
     const mailtoUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
     window.location.href = mailtoUrl

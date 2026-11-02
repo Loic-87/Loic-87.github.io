@@ -16,11 +16,11 @@ const STEPS = [
   {
     period: 'Mars 2026',
     title: 'Formation Développeur Web',
-    text: 'Démarrage de la formation (OpenClassrooms / Greta Limoges) — HTML/CSS, JavaScript, React, Symfony/Twig, Node.js...',
+    text: 'Démarrage de la formation (OpenClassrooms / Greta Limoges) : HTML/CSS, JavaScript, React, Symfony/Twig, Node.js...',
   },
   {
     period: 'Août – Octobre 2026',
-    title: 'Stage — Le Comptoir de la Moto',
+    title: 'Stage : Le Comptoir de la Moto',
     text: "Développement front-end d'un site d'annonces moto, design system sur-mesure de A à Z.",
   },
   {

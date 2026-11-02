@@ -46,7 +46,7 @@ export const projects = [
     blurb: "Audit et optimisation perf/SEO/accessibilité d'un site existant.",
     repo: 'https://github.com/Loic-87/mon-projet-Nina-Carducci',
     contexte:
-      "Audit et optimisation du site vitrine existant d'une photographe — reprendre un projet existant plutôt que le construire de zéro.",
+      "Audit et optimisation du site vitrine existant d'une photographe. Reprendre un projet existant plutôt que le construire de zéro.",
     objectifs:
       "Corriger les problèmes de performance (poids des images, temps de chargement), d'accessibilité (contrastes, alt, navigation clavier) et de référencement naturel (balisage sémantique, meta).",
     stackDetail:
@@ -100,7 +100,7 @@ export const projects = [
     title: 'Menu Maker',
     category: 'Formation',
     stack: ['Spécifications techniques', 'Kanban'],
-    blurb: 'Spécifications techniques et Kanban pour une application fictive — pas de code sur ce projet.',
+    blurb: 'Spécifications techniques et Kanban pour une application fictive, sans code sur ce projet.',
     repo: null,
     noRepoReason: 'Pas de code sur ce projet',
     contexte:
@@ -108,7 +108,7 @@ export const projects = [
     objectifs:
       'Traduire les besoins utilisateurs (user stories) en un document de spécifications techniques complet (architecture, hébergement, sécurité) puis en un Kanban détaillé découpant chaque user story en tâches techniques concrètes, estimées et assignées (front-end / back-end).',
     stackDetail:
-      'Pas de code sur ce projet — travail d’analyse et de conception : lecture de maquette Figma en mode prototype, rédaction de spécifications techniques, veille technologique organisée sur Feedly/Inoreader, outil de gestion de projet type Notion pour le Kanban.',
+      'Pas de code sur ce projet, du travail d’analyse et de conception : lecture de maquette Figma en mode prototype, rédaction de spécifications techniques, veille technologique organisée sur Feedly/Inoreader, outil de gestion de projet type Notion pour le Kanban.',
     competences:
       'Analyse fonctionnelle (transformer un "quoi" utilisateur en "comment" technique), rédaction de documentation technique argumentée, découpage d’un projet en tâches précises et estimables (story points), veille technologique structurée, communication orientée non-développeur.',
     resultats:
@@ -144,7 +144,7 @@ export const projects = [
     repo: null,
     noRepoReason: 'Repo à venir',
     contexte:
-      'Projet réalisé en stage : un site de petites annonces façon Leboncoin, mais entièrement dédié à la moto — un choix assumé car passionné de moto, pour donner une vraie identité au projet plutôt qu’un clone générique.',
+      'Projet réalisé en stage : un site de petites annonces façon Leboncoin, mais entièrement dédié à la moto, un choix assumé car passionné de moto, pour donner une vraie identité au projet plutôt qu’un clone générique.',
     objectifs:
       'Construire le parcours complet d’un site d’annonces (liste, recherche, filtres, détail d’une annonce, dépôt d’une annonce) avec un design system sur-mesure pensé pour le secteur moto.',
     stackDetail:

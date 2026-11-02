@@ -5,7 +5,7 @@ import { getProjectBySlug } from '../data/projects'
 import TechTag from '../components/TechTag'
 import CategoryBadge from '../components/CategoryBadge'
 
-const DEFAULT_TITLE = 'Loïc Le Faucheur — Développeur Full-Stack Junior React'
+const DEFAULT_TITLE = 'Loïc Le Faucheur · Développeur Full-Stack Junior React'
 
 const FICHE_SECTIONS = [
   { key: 'contexte', label: 'Contexte' },
@@ -22,7 +22,7 @@ function ProjectDetail() {
 
   useEffect(() => {
     document.title = project
-      ? `${project.title} — Loïc Le Faucheur`
+      ? `${project.title} · Loïc Le Faucheur`
       : DEFAULT_TITLE
 
     return () => {
