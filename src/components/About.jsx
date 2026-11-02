@@ -1,4 +1,5 @@
 import FadeInSection from './FadeInSection'
+import SectionHeading from './SectionHeading'
 
 const PITCH = [
   {
@@ -30,15 +31,13 @@ const PITCH = [
 function About() {
   return (
     <FadeInSection id="apropos" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
-      <h2 className="font-display text-3xl font-bold md:text-4xl">
-        À propos
-      </h2>
+      <SectionHeading number="01" title="À propos" />
 
-      <div className="mt-10 flex flex-col gap-8">
+      <div className="flex flex-col gap-8">
         {PITCH.map((part) => (
           <div key={part.label}>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">
-              {part.label}
+            <p className="font-mono text-xs tracking-wider text-primary uppercase">
+              // {part.label}
             </p>
             <p className="mt-2 text-text-muted">{part.text}</p>
           </div>

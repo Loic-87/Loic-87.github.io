@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import FadeInSection from './FadeInSection'
+import SectionHeading from './SectionHeading'
 
 const STEPS = [
   {
@@ -32,11 +33,9 @@ const STEPS = [
 function Timeline() {
   return (
     <FadeInSection id="parcours" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
-      <h2 className="font-display text-3xl font-bold md:text-4xl">
-        Parcours
-      </h2>
+      <SectionHeading number="04" title="Parcours" />
 
-      <ol className="mt-10 border-l border-white/10 pl-6">
+      <ol className="border-l border-white/10 pl-6">
         {STEPS.map((step, index) => (
           <motion.li
             key={step.title}
@@ -46,8 +45,8 @@ function Timeline() {
             transition={{ duration: 0.4, delay: index * 0.1 }}
             className="relative mb-10 last:mb-0"
           >
-            <span className="absolute top-1.5 -left-[29px] h-3 w-3 rounded-full bg-primary" />
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">
+            <span className="absolute top-1 -left-[25px] h-2 w-2 rotate-45 bg-primary" />
+            <p className="font-mono text-xs tracking-wider text-primary uppercase">
               {step.period}
             </p>
             <p className="mt-1 font-semibold">{step.title}</p>

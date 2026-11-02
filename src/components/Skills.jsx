@@ -1,4 +1,6 @@
 import FadeInSection from './FadeInSection'
+import SectionHeading from './SectionHeading'
+import TechTag from './TechTag'
 
 const HARD_SKILLS = {
   'Front-end': ['React', 'JavaScript (ES6+)', 'HTML5 sémantique', 'CSS3 / Sass', 'Tailwind CSS', 'Vite'],
@@ -24,25 +26,18 @@ const SOFT_SKILLS = [
 function Skills() {
   return (
     <FadeInSection id="competences" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
-      <h2 className="font-display text-3xl font-bold md:text-4xl">
-        Compétences
-      </h2>
+      <SectionHeading number="02" title="Compétences" />
 
       {/* Stack technique */}
-      <div className="mt-10 flex flex-col gap-8">
+      <div className="flex flex-col gap-8">
         {Object.entries(HARD_SKILLS).map(([category, skills]) => (
           <div key={category}>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">
-              {category}
+            <p className="font-mono text-xs tracking-wider text-primary uppercase">
+              // {category}
             </p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {skills.map((skill) => (
-                <li
-                  key={skill}
-                  className="rounded-full border border-white/10 bg-bg-elevated px-4 py-1.5 text-sm text-text"
-                >
-                  {skill}
-                </li>
+                <TechTag key={skill}>{skill}</TechTag>
               ))}
             </ul>
           </div>
@@ -54,7 +49,7 @@ function Skills() {
         {SOFT_SKILLS.map((soft) => (
           <div
             key={soft.title}
-            className="rounded-xl border border-white/10 bg-bg-elevated p-5"
+            className="border-l-2 border-primary/40 pl-4"
           >
             <p className="font-display font-semibold text-primary">
               {soft.title}

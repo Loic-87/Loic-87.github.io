@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getProjectBySlug } from '../data/projects'
+import TechTag from '../components/TechTag'
 
 const DEFAULT_TITLE = 'Loïc Le Faucheur — Développeur Full-Stack Junior React'
 
@@ -54,27 +55,22 @@ function ProjectDetail() {
         <h1 className="font-display text-3xl font-bold md:text-4xl">
           {project.title}
         </h1>
-        <span className="shrink-0 rounded-full border border-primary/40 px-3 py-1 text-sm text-primary">
+        <span className="shrink-0 font-mono text-xs tracking-wider text-primary uppercase">
           {project.category}
         </span>
       </div>
 
       <ul className="mt-4 flex flex-wrap gap-2">
         {project.stack.map((tech) => (
-          <li
-            key={tech}
-            className="rounded-full bg-white/5 px-3 py-1 text-xs text-text-muted"
-          >
-            {tech}
-          </li>
+          <TechTag key={tech}>{tech}</TechTag>
         ))}
       </ul>
 
       <div className="mt-10 flex flex-col gap-8">
         {FICHE_SECTIONS.map((section) => (
           <div key={section.key}>
-            <p className="font-display text-sm font-semibold uppercase tracking-wide text-primary">
-              {section.label}
+            <p className="font-mono text-xs tracking-wider text-primary uppercase">
+              // {section.label}
             </p>
             <p className="mt-2 text-text-muted">{project[section.key]}</p>
           </div>
@@ -86,7 +82,7 @@ function ProjectDetail() {
           href={project.repo}
           target="_blank"
           rel="noreferrer"
-          className="mt-10 inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
+          className="mt-10 inline-block bg-primary px-6 py-3 font-semibold text-bg [clip-path:polygon(0_0,calc(100%-10px)_0,100%_10px,100%_100%,0_100%)]"
         >
           Voir le code sur GitHub →
         </a>

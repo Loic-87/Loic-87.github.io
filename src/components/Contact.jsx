@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import FadeInSection from './FadeInSection'
+import SectionHeading from './SectionHeading'
 
 const EMAIL = 'loic.lf87@gmail.com'
 
@@ -33,13 +34,11 @@ function Contact() {
 
   return (
     <FadeInSection id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
-      <h2 className="font-display text-3xl font-bold md:text-4xl">
-        Contact
-      </h2>
+      <SectionHeading number="05" title="Contact" />
 
-      <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="name" className="text-sm font-semibold">
+          <label htmlFor="name" className="font-mono text-xs tracking-wider text-primary uppercase">
             Nom
           </label>
           <input
@@ -54,7 +53,7 @@ function Contact() {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="email" className="text-sm font-semibold">
+          <label htmlFor="email" className="font-mono text-xs tracking-wider text-primary uppercase">
             Email
           </label>
           <input
@@ -69,7 +68,7 @@ function Contact() {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="message" className="text-sm font-semibold">
+          <label htmlFor="message" className="font-mono text-xs tracking-wider text-primary uppercase">
             Message
           </label>
           <textarea

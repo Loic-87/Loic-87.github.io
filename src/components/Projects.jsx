@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 import FadeInSection from './FadeInSection'
+import SectionHeading from './SectionHeading'
 
 const FILTERS = ['Tous', 'Formation', 'Personnel']
 
@@ -16,29 +17,34 @@ function Projects() {
 
   return (
     <FadeInSection id="projets" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-24">
-      <h2 className="font-display text-3xl font-bold md:text-4xl">Projets</h2>
+      <SectionHeading number="03" title="Projets" />
 
-      <div className="mt-6 flex gap-3">
+      <div className="mb-8 flex gap-6 border-b border-white/10 font-mono text-sm">
         {FILTERS.map((filter) => (
           <motion.button
             key={filter}
             type="button"
             onClick={() => setActiveFilter(filter)}
             aria-pressed={activeFilter === filter}
-            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
+            className={`relative pb-3 transition-colors ${
               activeFilter === filter
-                ? 'border-primary bg-primary text-bg font-semibold'
-                : 'border-white/10 text-text-muted hover:text-text'
+                ? 'text-primary'
+                : 'text-text-muted hover:text-text'
             }`}
           >
             {filter}
+            {activeFilter === filter && (
+              <motion.span
+                layoutId="activeFilterUnderline"
+                className="absolute bottom-0 left-0 h-0.5 w-full bg-primary"
+              />
+            )}
           </motion.button>
         ))}
       </div>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2">
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
             <motion.div

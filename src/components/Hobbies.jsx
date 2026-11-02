@@ -1,18 +1,18 @@
 import FadeInSection from './FadeInSection'
+import SectionHeading from './SectionHeading'
+import TechTag from './TechTag'
 
 function Hobbies() {
   return (
     <FadeInSection id="hobbies" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
-      <h2 className="font-display text-3xl font-bold md:text-4xl">
-        Hobbies tech
-      </h2>
+      <SectionHeading number="+" title="Hobbies tech" />
 
-      <div className="mt-10 rounded-xl border border-white/10 bg-bg-elevated p-6">
+      <div className="rounded-lg border border-dashed border-white/20 bg-bg-elevated/50 p-6">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-display text-lg font-semibold">
             Broken Sunshine — conception d'un RPG
           </h3>
-          <span className="shrink-0 rounded-full border border-white/20 px-2.5 py-0.5 text-xs text-text-muted">
+          <span className="shrink-0 font-mono text-xs tracking-wider text-text-muted uppercase">
             En pause
           </span>
         </div>
@@ -28,12 +28,7 @@ function Hobbies() {
         <ul className="mt-4 flex flex-wrap gap-2">
           {['Game Design', 'Équilibrage', 'Narration', 'Unity (à venir)'].map(
             (tag) => (
-              <li
-                key={tag}
-                className="rounded-full bg-white/5 px-3 py-1 text-xs text-text-muted"
-              >
-                {tag}
-              </li>
+              <TechTag key={tag}>{tag}</TechTag>
             ),
           )}
         </ul>
