@@ -4,27 +4,27 @@ import SectionHeading from './SectionHeading'
 const PITCH = [
   {
     label: 'Qui je suis',
-    text: 'Je suis Loïc Le Faucheur, développeur full-stack junior — une base front-end solide, et des premières bases back-end encore en construction. Passionné de code, de gaming et de moto.',
+    text: "Loïc Le Faucheur, développeur full-stack junior. Solide en front-end, encore en train de construire mes bases back-end. Je code, je joue, je roule — pas forcément dans cet ordre.",
   },
   {
     label: 'Mon parcours',
-    text: "Avant le développement, j'ai travaillé plusieurs années en usine, dans des secteurs variés. Pour des raisons personnelles, j'ai eu l'opportunité de repenser mon avenir professionnel. Passionné d'informatique et de jeux vidéo depuis toujours, j'ai vu dans le développement web une voie qui me correspondait enfin, et je me suis lancé dans une formation complète pour en faire mon métier.",
+    text: "J'ai passé plusieurs années en usine, dans des secteurs différents. Pour des raisons personnelles, j'ai dû repenser mon avenir pro. L'informatique et le jeu vidéo, ça a toujours été mon truc, donc je me suis lancé dans une formation de dev pour en faire mon métier.",
   },
   {
     label: 'Ma stack',
-    text: "Je travaille principalement avec React et Vite côté front-end. J'ai aussi posé mes premières bases back-end avec Node.js, Express et MongoDB, où j'ai sécurisé une API (authentification JWT, hash des mots de passe, optimisation d'images). Mon projet React le plus complet, Kasa, illustre cette logique : composants réutilisables, hooks personnalisés, couche de service découplée.",
+    text: "React et Vite en front, la plupart du temps. Côté back, je débute avec Node.js, Express et MongoDB — j'ai sécurisé une API (JWT, hash des mots de passe, images optimisées) sur Mon Vieux Grimoire. Kasa reste mon projet React le plus abouti : composants réutilisables, hooks perso, couche service découplée.",
   },
   {
     label: 'Ce qui me représente le mieux',
-    text: "Le projet dont je suis le plus fier est Le Comptoir de la Moto, réalisé en stage : un site d'annonces dédié à la moto, un sujet qui me parle en tant que motard. J'y ai construit un design system complet de A à Z et toute l'arborescence du site.",
+    text: "Le Comptoir de la Moto, mon projet de stage. Un site d'annonces dédié à la moto — pas un clone de plus, un vrai sujet qui me parle. J'ai construit le design system et toute l'arborescence de A à Z.",
   },
   {
     label: 'Ma façon de travailler',
-    text: "Je travaille mieux seul : je gère mes projets de bout en bout, à mon rythme — même si j'ai déjà collaboré en équipe (Cave à Vin, le jeu de rôle Broken Sunshine). Ce qui me caractérise le plus, c'est ma créativité — je ne reproduis jamais un exemple à l'identique, j'aime lui donner une identité propre — et ma curiosité, avec un fil rouge technique (l'OCR) qui revient sur plusieurs de mes projets personnels, simplement parce qu'il m'intéresse.",
+    text: "Je bosse mieux seul, à mon rythme, sans me disperser — même si j'ai déjà fait de l'équipe (Cave à Vin, le jeu de rôle Broken Sunshine). Deux trucs qui reviennent sur mes projets perso : je rethème toujours plutôt que de copier (un démineur devient un antivirus, un Leboncoin devient dédié à la moto), et un sujet technique — l'OCR — revient sans arrêt, juste parce qu'il m'intéresse.",
   },
   {
     label: 'Ce que je vise',
-    text: "Je recherche un poste de développeur full-stack, idéalement dans un secteur qui me parle — le jeu vidéo ou la moto — mais je reste ouvert à d'autres domaines. Je veux surtout continuer à monter en compétence côté back-end, au contact de développeurs plus expérimentés.",
+    text: "Un poste de développeur full-stack, idéalement dans le jeu vidéo ou la moto — mais je reste ouvert. L'objectif : monter en compétence côté back-end, au contact de devs plus expérimentés.",
   },
 ]
 
