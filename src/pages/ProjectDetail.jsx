@@ -86,7 +86,9 @@ function ProjectDetail() {
           Voir le code sur GitHub →
         </a>
       ) : (
-        <p className="mt-10 italic text-text-muted">{project.noRepoReason}</p>
+        <p className="mt-10 inline-block rounded-lg border border-highlight/40 bg-highlight/10 px-4 py-2 text-sm font-semibold text-highlight">
+          {project.noRepoReason}
+        </p>
       )}
     </motion.article>
   )

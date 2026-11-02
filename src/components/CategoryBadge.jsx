@@ -1,5 +1,5 @@
 const STYLES = {
-  Formation: 'border-primary/40 text-primary bg-primary/10',
+  Formation: 'border-primary/40 text-primary-strong bg-primary/10',
   Personnel: 'border-accent/40 text-accent bg-accent/10',
 }
 

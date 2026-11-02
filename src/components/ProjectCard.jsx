@@ -21,11 +21,11 @@ function ProjectCard({ project }) {
       <div className="mt-auto flex items-center gap-4 pt-2">
         <Link
           to={`/projets/${project.slug}`}
-          className="text-sm font-semibold text-primary hover:underline"
+          className="text-sm font-semibold text-primary-strong hover:underline"
         >
           Voir la fiche →
         </Link>
-        {project.repo && (
+        {project.repo ? (
           <a
             href={project.repo}
             target="_blank"
@@ -34,6 +34,10 @@ function ProjectCard({ project }) {
           >
             Code
           </a>
+        ) : (
+          <span className="text-xs font-semibold text-highlight">
+            {project.noRepoReason}
+          </span>
         )}
       </div>
     </article>

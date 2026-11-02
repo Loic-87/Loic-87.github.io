@@ -12,7 +12,7 @@ function Hobbies() {
           <h3 className="font-display text-lg font-semibold">
             Broken Sunshine — conception d'un RPG
           </h3>
-          <span className="shrink-0 font-mono text-xs tracking-wider text-text-muted uppercase">
+          <span className="shrink-0 rounded-full border border-highlight/40 bg-highlight/10 px-2.5 py-0.5 text-xs font-semibold text-highlight">
             En pause
           </span>
         </div>
