@@ -1,6 +1,9 @@
+import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getProjectBySlug } from '../data/projects'
+
+const DEFAULT_TITLE = 'Loïc Le Faucheur — Développeur Full-Stack Junior React'
 
 const FICHE_SECTIONS = [
   { key: 'contexte', label: 'Contexte' },
@@ -14,6 +17,16 @@ const FICHE_SECTIONS = [
 function ProjectDetail() {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
+
+  useEffect(() => {
+    document.title = project
+      ? `${project.title} — Loïc Le Faucheur`
+      : DEFAULT_TITLE
+
+    return () => {
+      document.title = DEFAULT_TITLE
+    }
+  }, [project])
 
   if (!project) {
     return (
