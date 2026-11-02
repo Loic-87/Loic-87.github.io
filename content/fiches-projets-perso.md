@@ -1,0 +1,43 @@
+# Fiches projets — personnels / stage
+
+> Même principe que pour les fiches formation : brouillon à relire et reformuler avec tes mots.
+
+---
+
+## Démineur Antivirus
+*Repo : [demineur-antivirus](https://github.com/Loic-87/demineur-antivirus) — React/Vite*
+
+**Contexte** : Projet personnel pour s'exercer à un algorithme classique (le démineur) en le ré-habillant dans un univers "antivirus" : on scanne un système à la recherche de virus plutôt que de mines.
+
+**Objectifs** : Réimplémenter de zéro la logique du démineur (placement aléatoire, calcul des cases adjacentes, propagation en cascade des cases vides, détection de victoire/défaite) sans librairie, et la rendre jouable aussi bien au clic/clic-droit sur PC qu'au tap/appui-long sur mobile.
+
+**Stack technique** : React (hooks `useState`/`useRef`), Vite, JavaScript pur pour la logique de jeu (module `game.js` découplé de l'UI).
+
+**Compétences développées** : Algorithmique récursive (ouverture en cascade des cases), gestion d'état immuable (`structuredClone` de la grille à chaque action), gestion des interactions tactiles (détection d'un appui long pour poser un drapeau sur mobile, sans librairie dédiée).
+
+**Résultats et impact** : MVP entièrement jouable sur PC et mobile, logique de jeu testée et fiable (grille 9×9, 10 virus).
+
+**Perspectives d'amélioration** : Ajouter des niveaux de difficulté, un chronomètre, et une couche "roguelike" (power-ups) envisagée comme évolution du projet.
+
+---
+
+## Le Comptoir de la Moto
+*Repo : à publier — projet réalisé en stage, React/Vite*
+
+**Contexte** : Projet réalisé en stage : un site de petites annonces façon Leboncoin, mais entièrement dédié à la moto — un choix assumé car passionné de moto, pour donner une vraie identité au projet plutôt qu'un clone générique.
+
+**Objectifs** : Construire le parcours complet d'un site d'annonces (liste, recherche, filtres, détail d'une annonce, dépôt d'une annonce) avec un design system sur-mesure pensé pour le secteur moto (filtres par cylindrée, type de moto, permis requis).
+
+**Stack technique** : React 19, React Router v7, Vite, CSS avec design system dédié (palette anthracite/or, typographies Rajdhani + Inter).
+
+**Compétences développées** : Conception d'un design system de A à Z (palette couleur selon la règle 60-30-10, choix typographique, composants réutilisables comme la carte d'annonce), structuration d'une arborescence multi-pages avec React Router, modélisation de données métier spécifiques (fiche technique moto : marque, cylindrée, permis, kilométrage...).
+
+**Résultats et impact** : MVP front fonctionnel avec liste d'annonces, filtres, page détail et formulaire de dépôt sur données de démonstration.
+
+**Perspectives d'amélioration** : Backend Node.js pour persister les annonces et les comptes utilisateurs, authentification, et une fonctionnalité d'OCR pour scanner la carte grise et pré-remplir automatiquement une annonce.
+
+---
+
+## Notes
+- Comptoir de la Moto n'a pas encore de repo GitHub (code existe en local, pas encore versionné) — lien à ajouter une fois le repo créé et poussé.
+- Menu Maker (projet OCR) : repo introuvable pour l'instant, en attente.

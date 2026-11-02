@@ -1,10 +1,26 @@
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Timeline from './components/Timeline'
+import Hobbies from './components/Hobbies'
+import Contact from './components/Contact'
+
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold text-primary">
-        Portfolio en construction
-      </h1>
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Timeline />
+        <Hobbies />
+        <Contact />
+      </main>
+    </>
   )
 }
 

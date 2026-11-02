@@ -7,9 +7,13 @@
   --color-text-muted: #9a94ab;
   --color-primary: #a855f7;
   --color-primary-strong: #c084fc;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  font-family: var(--font-sans);
 }
