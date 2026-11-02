@@ -9,7 +9,7 @@ function ProjectCard({ project }) {
         <img
           src={project.image}
           alt={`Capture d'écran du projet ${project.title}`}
-          className="aspect-video w-full object-cover"
+          className="aspect-video w-full object-cover object-top"
         />
       )}
 
