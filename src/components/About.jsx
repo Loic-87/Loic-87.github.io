@@ -37,7 +37,7 @@ function About() {
         {PITCH.map((part) => (
           <div key={part.label}>
             <p className="font-mono text-xs tracking-wider text-primary uppercase">
-              // {part.label}
+              {part.label}
             </p>
             <p className="mt-2 text-text-muted">{part.text}</p>
           </div>

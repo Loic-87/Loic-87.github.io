@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { getProjectBySlug } from '../data/projects'
 import TechTag from '../components/TechTag'
+import CategoryBadge from '../components/CategoryBadge'
 
 const DEFAULT_TITLE = 'Loïc Le Faucheur — Développeur Full-Stack Junior React'
 
@@ -55,9 +56,7 @@ function ProjectDetail() {
         <h1 className="font-display text-3xl font-bold md:text-4xl">
           {project.title}
         </h1>
-        <span className="shrink-0 font-mono text-xs tracking-wider text-primary uppercase">
-          {project.category}
-        </span>
+        <CategoryBadge category={project.category} />
       </div>
 
       <ul className="mt-4 flex flex-wrap gap-2">
@@ -70,7 +69,7 @@ function ProjectDetail() {
         {FICHE_SECTIONS.map((section) => (
           <div key={section.key}>
             <p className="font-mono text-xs tracking-wider text-primary uppercase">
-              // {section.label}
+              {section.label}
             </p>
             <p className="mt-2 text-text-muted">{project[section.key]}</p>
           </div>
@@ -82,7 +81,7 @@ function ProjectDetail() {
           href={project.repo}
           target="_blank"
           rel="noreferrer"
-          className="mt-10 inline-block bg-primary px-6 py-3 font-semibold text-bg [clip-path:polygon(0_0,calc(100%-10px)_0,100%_10px,100%_100%,0_100%)]"
+          className="mt-10 inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
         >
           Voir le code sur GitHub →
         </a>

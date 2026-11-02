@@ -33,7 +33,7 @@ function Skills() {
         {Object.entries(HARD_SKILLS).map(([category, skills]) => (
           <div key={category}>
             <p className="font-mono text-xs tracking-wider text-primary uppercase">
-              // {category}
+              {category}
             </p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {skills.map((skill) => (
