@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV de Loïc Le Faucheur, Développeur Web & Web Mobile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <style>
+    :root {
+      --violet: #7c3aed;
+      --magenta: #c026d3;
+      --grad: linear-gradient(120deg, #7c3aed 0%, #c026d3 100%);
+      --ink: #1c1830;
+      --muted: #56506b;
+      --faint: #8b859c;
+      --line: rgba(28, 24, 48, 0.14);
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-head: 'Space Grotesk', var(--font-body);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: #f2f1f7;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 24px auto;
+      background: #fff;
+      box-shadow: 0 8px 40px rgba(28, 24, 48, 0.12);
+      display: grid;
+      grid-template-columns: 68mm 1fr;
+      overflow: hidden;
+    }
+
+    /* ---------- Colonne latérale ---------- */
+    .side {
+      background: #17122a;
+      color: #e9e6f3;
+      padding: 16mm 9mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .side .name {
+      font-family: var(--font-head);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .side .role {
+      font-size: 12.5px;
+      color: #c9a8f5;
+      font-weight: 600;
+    }
+
+    .side h2 {
+      font-family: var(--font-head);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #d9a6ee;
+      margin-bottom: 10px;
+    }
+
+    .side .contact-item {
+      display: block;
+      font-size: 12.5px;
+      color: #cfc9de;
+      margin-bottom: 9px;
+      word-break: break-word;
+    }
+    .side .contact-item:last-child { margin-bottom: 0; }
+    .side .contact-item span {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8b7fa8;
+      margin-bottom: 2px;
+    }
+
+    .skill-block { margin-bottom: 14px; }
+    .skill-block:last-child { margin-bottom: 0; }
+    .skill-block p.cat {
+      font-size: 11px;
+      color: #a98ed6;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    .skill-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+      color: #e2ddf0;
+      margin-bottom: 6px;
+    }
+    .skill-row:last-child { margin-bottom: 0; }
+    .dots { display: inline-flex; gap: 4px; }
+    .dots i {
+      width: 6.5px; height: 6.5px; border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: inline-block;
+    }
+    .dots i.on { background: var(--magenta); }
+
+    .side .langue { font-size: 12.5px; color: #cfc9de; }
+
+    .side .tag-soft {
+      display: inline-block;
+      font-size: 11px;
+      color: #d9a6ee;
+      border: 1px solid rgba(217,166,238,0.35);
+      border-radius: 999px;
+      padding: 2.5px 9px;
+      margin: 0 6px 6px 0;
+    }
+
+    /* ---------- Colonne principale ---------- */
+    .main {
+      padding: 18mm 15mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .main h2 {
+      font-family: var(--font-head);
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--violet);
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 7px;
+      margin-bottom: 14px;
+    }
+
+    .profil p {
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    .entry { margin-bottom: 16px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .entry-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--ink);
+    }
+    .entry-date {
+      font-size: 11.5px;
+      color: var(--faint);
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .entry-sub {
+      font-size: 12.5px;
+      color: var(--magenta);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .entry-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+    .entry-tech {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .entry-tech span {
+      font-size: 10.5px;
+      background: rgba(124, 58, 237, 0.08);
+      color: var(--violet);
+      border-radius: 5px;
+      padding: 2.5px 8px;
+      font-weight: 600;
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        box-shadow: none;
+      }
+      @page { size: A4; margin: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- ================= COLONNE LATÉRALE ================= -->
+    <aside class="side">
+      <div class="side-group">
+        <div class="name">Loïc<br>Le Faucheur</div>
+        <div class="role">Développeur Web &amp; Web Mobile</div>
+      </div>
+
+      <div class="side-group">
+        <h2>Contact</h2>
+        <a class="contact-item" href="mailto:loic.lf87@gmail.com"><span>Email</span>loic.lf87@gmail.com</a>
+        <a class="contact-item" href="https://github.com/Loic-87"><span>GitHub</span>github.com/Loic-87</a>
+        <a class="contact-item" href="https://www.linkedin.com/in/lo%C3%AFc-le-faucheur-14a5023b4/"><span>LinkedIn</span>Loïc Le Faucheur</a>
+        <span class="contact-item"><span>Localisation</span>Limoges, France</span>
+        <span class="contact-item"><span>Disponibilité</span>Stage du 31 août au 30 oct. 2026</span>
+      </div>
+
+      <div class="side-group">
+        <h2>Compétences</h2>
+        <div class="skill-block">
+          <p class="cat">Bases &amp; langages</p>
+          <div class="skill-row">HTML5 <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+          <div class="skill-row">CSS3 <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+          <div class="skill-row">JavaScript ES6 <span class="dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+          <div class="skill-row">Git / GitHub <span class="dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+        </div>
+        <div class="skill-block">
+          <p class="cat">Front-end &amp; qualité</p>
+          <div class="skill-row">Bootstrap <span class="dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+          <div class="skill-row">Accessibilité <span class="dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+          <div class="skill-row">SEO / Lighthouse <span class="dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+        </div>
+        <div class="skill-block">
+          <p class="cat">Back-end &amp; données</p>
+          <div class="skill-row">MySQL <span class="dots"><i class="on"></i><i></i><i></i></span></div>
+          <div class="skill-row">REST API <span class="dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+        </div>
+        <div class="skill-block">
+          <p class="cat">En cours d'apprentissage</p>
+          <span class="tag-soft">Node.js</span>
+          <span class="tag-soft">React</span>
+        </div>
+      </div>
+
+      <!-- TODO Loïc : ajoute tes langues si tu veux (ex. Français natif, Anglais scolaire/technique) -->
+      <div class="side-group">
+        <h2>Centres d'intérêt</h2>
+        <p class="langue">Jeu vidéo, tech, résolution de problèmes</p>
+      </div>
+    </aside>
+
+    <!-- ================= COLONNE PRINCIPALE ================= -->
+    <main class="main">
+
+      <section class="profil">
+        <h2>Profil</h2>
+        <p>En reconversion vers le développement web, à la recherche d'un stage puis d'une alternance en full-stack.
+          J'aime apprendre vite, tester, déboguer et livrer des interfaces propres, accessibles et soignées.
+          En formation DWWM, motivé pour mettre ces compétences en pratique sur des projets réels.</p>
+      </section>
+
+      <section>
+        <h2>Formation</h2>
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">Titre professionnel DWWM (Développeur Web &amp; Web Mobile)</span>
+            <span class="entry-date">Depuis mars 2026</span>
+          </div>
+          <div class="entry-sub">GRETA du Limousin, Limoges + parcours OpenClassrooms</div>
+          <p class="entry-desc">Formation en cours, certification prévue en décembre 2026 : intégration front-end,
+            JavaScript, back-end (Node.js), bases de données, méthodologie de projet.</p>
+        </div>
+      </section>
+
+      <!-- TODO Loïc : après ton stage (31 août – 30 oct. 2026), ajoute ici une section <h2>Expérience</h2>
+           avec un .entry pour l'entreprise : mission(s) confiée(s), langages/frameworks/outils utilisés
+           concrètement (au-delà de ce que tu vois en formation), et ce que ça t'a appris de nouveau.
+           Une expérience en entreprise pèse plus qu'un projet d'école aux yeux d'un recruteur — mets-la
+           bien en avant, quitte à la placer avant "Formation" une fois que tu l'auras. -->
+
+      <section>
+        <h2>Projets</h2>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">Nina Carducci</span>
+          </div>
+          <p class="entry-desc">Débogage et optimisation d'un site de photographe existant. Scores Lighthouse
+            optimisés à 90 %+ sur toutes les catégories.</p>
+          <div class="entry-tech"><span>SEO</span><span>Accessibilité</span><span>Lighthouse</span><span>Bootstrap</span></div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">Sophie Bluel</span>
+          </div>
+          <p class="entry-desc">Portfolio d'architecte d'intérieur : galerie dynamique, authentification JWT, mode
+            admin avec ajout/suppression de photos, connexion à une API REST locale.</p>
+          <div class="entry-tech"><span>JavaScript ES6</span><span>REST API</span><span>JWT</span></div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">Agence de voyage</span>
+          </div>
+          <p class="entry-desc">Intégration responsive d'une page d'accueil. Premier projet front-end complet, HTML
+            sémantique et CSS structuré.</p>
+          <div class="entry-tech"><span>HTML5</span><span>CSS3</span><span>Responsive</span></div>
+        </div>
+
+        <!-- TODO Loïc : ajoute ici tes 2 projets de jeu perso une fois finis (ex. Broken Sunshine),
+             même format que les entries ci-dessus (entry-title / entry-desc / entry-tech).
+             Dans entry-tech, liste précisément les langages/moteur/outils utilisés (ex. C#, Unity, Git),
+             et dans entry-desc mentionne ce que ces projets t'ont fait apprendre de nouveau (au-delà du DWWM) —
+             c'est souvent la partie la plus parlante pour un recruteur sur des projets perso. -->
+      </section>
+
+      <!-- TODO Loïc : si tu as une expérience professionnelle antérieure (même hors informatique),
+           ajoute une section "Expérience" ici — les compétences transférables (rigueur, relation client,
+           travail en équipe...) comptent beaucoup pour un premier stage en reconversion. -->
+
+    </main>
+  </div>
+
+</body>
+
+</html>
