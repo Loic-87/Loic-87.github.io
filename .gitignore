@@ -1,2 +1,14 @@
 # Sauvegarde locale de l'ancien design — non publiée
 _backup_ancien/
+_backup_v1/
+
+# Vite / Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Éditeurs / OS
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
