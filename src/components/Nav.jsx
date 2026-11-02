@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const LINKS = [
-  { href: '#accueil', label: 'Accueil' },
-  { href: '#apropos', label: 'À propos' },
-  { href: '#competences', label: 'Compétences' },
-  { href: '#projets', label: 'Projets' },
-  { href: '#parcours', label: 'Parcours' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#accueil', label: 'Accueil' },
+  { href: '/#apropos', label: 'À propos' },
+  { href: '/#competences', label: 'Compétences' },
+  { href: '/#projets', label: 'Projets' },
+  { href: '/#parcours', label: 'Parcours' },
+  { href: '/#contact', label: 'Contact' },
 ]
 
 function Nav() {
@@ -19,7 +19,7 @@ function Nav() {
         aria-label="Navigation principale"
         className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
       >
-        <a href="#accueil" className="font-display text-lg font-bold">
+        <a href="/#accueil" className="font-display text-lg font-bold">
           Loïc Le Faucheur
         </a>
 

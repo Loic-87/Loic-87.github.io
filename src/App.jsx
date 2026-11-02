@@ -1,24 +1,19 @@
+import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Timeline from './components/Timeline'
-import Hobbies from './components/Hobbies'
-import Contact from './components/Contact'
+import Home from './pages/Home'
+import ProjectDetail from './pages/ProjectDetail'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
     <>
       <Nav />
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Timeline />
-        <Hobbies />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projets/:slug" element={<ProjectDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
     </>
   )

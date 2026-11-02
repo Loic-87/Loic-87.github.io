@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function ProjectCard({ project }) {
   return (
     <article className="flex h-full flex-col gap-3 rounded-xl border border-white/10 bg-bg-elevated p-5 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
@@ -21,20 +23,24 @@ function ProjectCard({ project }) {
         ))}
       </ul>
 
-      {project.repo ? (
-        <a
-          href={project.repo}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-2 text-sm font-semibold text-primary hover:underline"
+      <div className="mt-auto flex items-center gap-4 pt-2">
+        <Link
+          to={`/projets/${project.slug}`}
+          className="text-sm font-semibold text-primary hover:underline"
         >
-          Voir le code →
-        </a>
-      ) : (
-        <p className="mt-2 text-sm italic text-text-muted">
-          {project.noRepoReason}
-        </p>
-      )}
+          Voir la fiche →
+        </Link>
+        {project.repo && (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-text-muted hover:text-primary"
+          >
+            Code
+          </a>
+        )}
+      </div>
     </article>
   )
 }
