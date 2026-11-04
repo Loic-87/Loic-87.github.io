@@ -1,15 +1,22 @@
 import { motion } from 'framer-motion'
+import { FaMotorcycle, FaGamepad } from 'react-icons/fa'
+import { FiCode } from 'react-icons/fi'
+import SectionIconDecor from './SectionIconDecor'
 
 function Hero() {
   return (
     <section
       id="accueil"
-      className="relative flex min-h-screen flex-col items-center justify-center gap-4 px-6 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-4 overflow-hidden px-6 text-center"
     >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute top-1/2 left-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/25 blur-[110px]"
       />
+
+      <SectionIconDecor icon={FaMotorcycle} position="mid-left" rotate={-12} size="14rem" />
+      <SectionIconDecor icon={FaGamepad} position="mid-right" rotate={10} size="14rem" />
+      <SectionIconDecor icon={FiCode} position="bottom-left" rotate={-8} size="14rem" />
 
       <motion.h1
         initial={{ opacity: 0, y: 16 }}
