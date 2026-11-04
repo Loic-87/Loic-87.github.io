@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
 import SectionGlow from './SectionGlow'
+import SectionIconDecor from './SectionIconDecor'
+import { FiCode } from 'react-icons/fi'
 
 const EMAIL = 'loic.lf87@gmail.com'
 
@@ -53,6 +55,7 @@ function Contact() {
       className="mx-auto max-w-3xl px-6"
       glow={<SectionGlow color="primary" position="left" />}
     >
+      <SectionIconDecor icon={FiCode} position="mid-right" rotate={-8} />
       <SectionHeading number="05" title="Contact" />
 
       <form

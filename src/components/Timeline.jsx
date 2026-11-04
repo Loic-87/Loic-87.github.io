@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
 import SectionGlow from './SectionGlow'
+import SectionIconDecor from './SectionIconDecor'
+import { FaRoute } from 'react-icons/fa'
 
 const STEPS = [
   {
@@ -38,6 +40,7 @@ function Timeline() {
       className="mx-auto max-w-3xl px-6"
       glow={<SectionGlow color="highlight" position="right" />}
     >
+      <SectionIconDecor icon={FaRoute} position="bottom-left" rotate={8} />
       <SectionHeading number="04" title="Parcours" />
 
       <ol className="border-l border-white/10 pl-6">

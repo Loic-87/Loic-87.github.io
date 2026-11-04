@@ -1,7 +1,9 @@
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
 import SectionGlow from './SectionGlow'
+import SectionIconDecor from './SectionIconDecor'
 import TechTag from './TechTag'
+import { FiCode } from 'react-icons/fi'
 
 const HARD_SKILLS = {
   'Front-end': ['React', 'JavaScript (ES6+)', 'HTML5 sémantique', 'CSS3 / Sass', 'Tailwind CSS', 'Vite'],
@@ -31,6 +33,7 @@ function Skills() {
       className="mx-auto max-w-3xl px-6"
       glow={<SectionGlow color="accent" position="right" />}
     >
+      <SectionIconDecor icon={FiCode} position="top-right" rotate={12} />
       <SectionHeading number="02" title="Compétences" />
 
       {/* Stack technique */}
@@ -56,7 +59,7 @@ function Skills() {
             key={soft.title}
             className="border-l-2 border-primary/40 pl-4"
           >
-            <p className="font-display font-semibold text-primary">
+            <p className="font-display font-semibold text-primary-strong">
               {soft.title}
             </p>
             <p className="mt-2 text-sm text-text-muted">{soft.text}</p>

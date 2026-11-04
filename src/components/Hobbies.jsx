@@ -1,7 +1,9 @@
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
 import SectionGlow from './SectionGlow'
+import SectionIconDecor from './SectionIconDecor'
 import TechTag from './TechTag'
+import { FaGamepad } from 'react-icons/fa'
 
 function Hobbies() {
   return (
@@ -10,6 +12,7 @@ function Hobbies() {
       className="mx-auto max-w-3xl px-6"
       glow={<SectionGlow color="accent" position="left" />}
     >
+      <SectionIconDecor icon={FaGamepad} position="bottom-right" rotate={-10} />
       <SectionHeading number="+" title="Hobbies tech" />
 
       <div className="rounded-lg border border-dashed border-white/20 bg-bg-elevated/50 p-6">
