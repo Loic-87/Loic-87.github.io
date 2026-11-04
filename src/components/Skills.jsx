@@ -1,5 +1,6 @@
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
+import SectionGlow from './SectionGlow'
 import TechTag from './TechTag'
 
 const HARD_SKILLS = {
@@ -25,7 +26,11 @@ const SOFT_SKILLS = [
 
 function Skills() {
   return (
-    <FadeInSection id="competences" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection
+      id="competences"
+      className="mx-auto max-w-3xl px-6"
+      glow={<SectionGlow color="accent" position="right" />}
+    >
       <SectionHeading number="02" title="Compétences" />
 
       {/* Stack technique */}

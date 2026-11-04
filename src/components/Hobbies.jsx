@@ -1,10 +1,15 @@
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
+import SectionGlow from './SectionGlow'
 import TechTag from './TechTag'
 
 function Hobbies() {
   return (
-    <FadeInSection id="hobbies" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection
+      id="hobbies"
+      className="mx-auto max-w-3xl px-6"
+      glow={<SectionGlow color="accent" position="left" />}
+    >
       <SectionHeading number="+" title="Hobbies tech" />
 
       <div className="rounded-lg border border-dashed border-white/20 bg-bg-elevated/50 p-6">

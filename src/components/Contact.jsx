@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
+import SectionGlow from './SectionGlow'
 
 const EMAIL = 'loic.lf87@gmail.com'
 
@@ -47,7 +48,11 @@ function Contact() {
   }
 
   return (
-    <FadeInSection id="contact" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection
+      id="contact"
+      className="mx-auto max-w-3xl px-6"
+      glow={<SectionGlow color="primary" position="left" />}
+    >
       <SectionHeading number="05" title="Contact" />
 
       <form
@@ -61,7 +66,7 @@ function Contact() {
         <input type="text" name="bot-field" className="hidden" tabIndex={-1} autoComplete="off" />
 
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="name" className="font-mono text-xs tracking-wider text-primary uppercase">
+          <label htmlFor="name" className="font-mono text-xs tracking-wider text-primary-strong uppercase">
             Nom
           </label>
           <input
@@ -76,7 +81,7 @@ function Contact() {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="email" className="font-mono text-xs tracking-wider text-primary uppercase">
+          <label htmlFor="email" className="font-mono text-xs tracking-wider text-primary-strong uppercase">
             Email
           </label>
           <input
@@ -91,7 +96,7 @@ function Contact() {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="message" className="font-mono text-xs tracking-wider text-primary uppercase">
+          <label htmlFor="message" className="font-mono text-xs tracking-wider text-primary-strong uppercase">
             Message
           </label>
           <textarea

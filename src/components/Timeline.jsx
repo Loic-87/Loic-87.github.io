@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
+import SectionGlow from './SectionGlow'
 
 const STEPS = [
   {
@@ -32,7 +33,11 @@ const STEPS = [
 
 function Timeline() {
   return (
-    <FadeInSection id="parcours" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection
+      id="parcours"
+      className="mx-auto max-w-3xl px-6"
+      glow={<SectionGlow color="highlight" position="right" />}
+    >
       <SectionHeading number="04" title="Parcours" />
 
       <ol className="border-l border-white/10 pl-6">

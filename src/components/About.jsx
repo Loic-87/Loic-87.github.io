@@ -1,5 +1,6 @@
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
+import SectionGlow from './SectionGlow'
 
 const PITCH = [
   {
@@ -30,7 +31,11 @@ const PITCH = [
 
 function About() {
   return (
-    <FadeInSection id="apropos" className="mx-auto max-w-3xl scroll-mt-24 px-6 py-24">
+    <FadeInSection
+      id="apropos"
+      className="mx-auto max-w-3xl px-6"
+      glow={<SectionGlow color="primary" position="left" />}
+    >
       <SectionHeading number="01" title="À propos" />
 
       <div className="flex flex-col gap-8">

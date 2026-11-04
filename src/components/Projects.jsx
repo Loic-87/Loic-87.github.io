@@ -4,6 +4,7 @@ import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 import FadeInSection from './FadeInSection'
 import SectionHeading from './SectionHeading'
+import SectionGlow from './SectionGlow'
 
 const FILTERS = ['Tous', 'Formation', 'Personnel']
 
@@ -16,7 +17,11 @@ function Projects() {
       : projects.filter((project) => project.category === activeFilter)
 
   return (
-    <FadeInSection id="projets" className="mx-auto max-w-5xl scroll-mt-24 px-6 py-24">
+    <FadeInSection
+      id="projets"
+      className="mx-auto max-w-5xl px-6"
+      glow={<SectionGlow color="primary" position="left" />}
+    >
       <SectionHeading number="03" title="Projets" />
 
       <div className="mb-8 flex gap-6 border-b border-white/10 font-mono text-sm">
