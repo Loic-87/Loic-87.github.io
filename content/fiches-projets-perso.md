@@ -38,6 +38,23 @@
 
 ---
 
+## TRON Light Cycles
+*Repo : à publier (tron-neon) — JavaScript, Three.js, WebRTC, Node.js/Express*
+
+**Contexte** : Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.
+
+**Objectifs** : Aller au-delà d'un simple jeu solo : trois vues (2D, 3D, poursuite), une IA, un tournoi, un éditeur de circuits, puis un vrai mode multijoueur en ligne entre amis avec un classement qu'on ne peut pas truquer seul.
+
+**Stack technique** : JavaScript sans framework, Canvas 2D, Three.js (3D), Web Audio API (musique et moteurs générés en direct), Gamepad API, WebRTC via PeerJS, Node.js + Express, PostgreSQL (Neon) et SQLite en local.
+
+**Compétences développées** : Boucle de jeu et collisions, IA qui mesure l'espace libre (parcours en largeur), synchronisation d'une partie en ligne (l'hôte calcule, les invités envoient leurs commandes), API REST avec jetons d'authentification, sécurité des données envoyées par les joueurs (validation, échappement contre l'injection de HTML).
+
+**Résultats et impact** : Jeu complet jouable au clavier ou à la manette, jusqu'à 4 pilotes en ligne avec chat et pseudos. Le classement en ligne ne valide une partie que si la majorité des joueurs confirme le même résultat.
+
+**Perspectives d'amélioration** : Mettre le jeu et le serveur en ligne (Render + Neon), ajouter de vrais comptes joueurs et des tests automatisés pour l'API.
+
+---
+
 ## Notes
 - Comptoir de la Moto n'a pas encore de repo GitHub (code existe en local, pas encore versionné) — lien à ajouter une fois le repo créé et poussé.
 - Menu Maker (projet OCR) : repo introuvable pour l'instant, en attente.

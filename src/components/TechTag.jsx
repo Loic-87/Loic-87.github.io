@@ -13,6 +13,8 @@ import {
   SiGithub,
   SiFigma,
   SiJsonwebtokens,
+  SiThreedotjs,
+  SiWebrtc,
 } from 'react-icons/si'
 
 const ICONS = {
@@ -33,6 +35,8 @@ const ICONS = {
   Git: { Icon: SiGit, color: '#F05032' },
   Figma: { Icon: SiFigma, color: '#F24E1E' },
   JWT: { Icon: SiJsonwebtokens, color: '#ffffff' },
+  'Three.js': { Icon: SiThreedotjs, color: '#ffffff' },
+  WebRTC: { Icon: SiWebrtc, color: '#ffffff' },
 }
 
 function TechTag({ children }) {

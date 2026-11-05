@@ -4,6 +4,7 @@ import ninaCarducciImage from '../assets/projects/nina-carducci.jpg'
 import kasaImage from '../assets/projects/kasa.jpg'
 import demineurImage from '../assets/projects/demineur-antivirus.jpg'
 import comptoirMotoImage from '../assets/projects/comptoir-de-la-moto.jpg'
+import tronImage from '../assets/projects/tron.jpg'
 
 export const projects = [
   {
@@ -168,6 +169,28 @@ export const projects = [
       "Un MVP front fonctionnel : liste d'annonces, filtres, page détail et formulaire de dépôt sur données de démonstration.",
     perspectives:
       "Un backend Node.js pour persister les annonces et les comptes, l'authentification, et une fonctionnalité d'OCR pour scanner la carte grise et pré-remplir une annonce automatiquement.",
+  },
+  {
+    slug: 'tron',
+    title: 'TRON Light Cycles',
+    category: 'Personnel',
+    stack: ['JavaScript', 'Three.js', 'WebRTC', 'Node.js'],
+    blurb: 'Jeu de motos de lumière façon Tron : vue 3D, IA, multijoueur en ligne et classement.',
+    repo: null,
+    noRepoReason: 'Repo à venir',
+    image: tronImage,
+    contexte:
+      "Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.",
+    objectifs:
+      "Aller au-delà d'un simple jeu solo : trois vues (2D, 3D, poursuite), une IA, un tournoi, un éditeur de circuits, puis un vrai mode multijoueur en ligne entre amis avec un classement qu'on ne peut pas truquer seul.",
+    stackDetail:
+      'JavaScript sans framework, Canvas 2D, Three.js (3D), Web Audio API (musique et moteurs générés en direct), Gamepad API, WebRTC via PeerJS, Node.js + Express, PostgreSQL (Neon) et SQLite en local.',
+    competences:
+      "Boucle de jeu et gestion des collisions, IA qui mesure l'espace libre (parcours en largeur), synchronisation d'une partie en ligne (l'hôte calcule, les invités envoient leurs commandes), création d'une API REST avec jetons d'authentification, sécurité des données envoyées par les joueurs (validation, échappement contre l'injection de HTML).",
+    resultats:
+      "Un jeu complet jouable au clavier ou à la manette, jusqu'à 4 pilotes en ligne avec chat et pseudos. Le classement en ligne ne valide une partie que si la majorité des joueurs confirme le même résultat.",
+    perspectives:
+      "Mettre le jeu et le serveur en ligne (Render + Neon), ajouter de vrais comptes joueurs, et des tests automatisés pour l'API.",
   },
 ]
 
