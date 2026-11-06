@@ -15,7 +15,9 @@ import {
   SiJsonwebtokens,
   SiThreedotjs,
   SiWebrtc,
+  SiDocker,
 } from 'react-icons/si'
+import { TbBrandVscode } from 'react-icons/tb'
 
 const ICONS = {
   React: { Icon: SiReact, color: '#61DAFB' },
@@ -37,6 +39,8 @@ const ICONS = {
   JWT: { Icon: SiJsonwebtokens, color: '#ffffff' },
   'Three.js': { Icon: SiThreedotjs, color: '#ffffff' },
   WebRTC: { Icon: SiWebrtc, color: '#ffffff' },
+  'VS Code': { Icon: TbBrandVscode, color: '#007ACC' },
+  Docker: { Icon: SiDocker, color: '#2496ED' },
 }
 
 function TechTag({ children }) {

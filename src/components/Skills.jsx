@@ -8,7 +8,7 @@ import { FiCode } from 'react-icons/fi'
 const HARD_SKILLS = {
   'Front-end': ['React', 'JavaScript (ES6+)', 'HTML5 sémantique', 'CSS3 / Sass', 'Tailwind CSS', 'Vite'],
   'Back-end': ['Node.js', 'Express', 'MongoDB', 'API REST', 'JWT'],
-  Outils: ['Git / GitHub', 'Figma', 'Lighthouse / WAVE'],
+  Outils: ['Git / GitHub', 'VS Code', 'Docker', 'Figma', 'Lighthouse / WAVE'],
 }
 
 const SOFT_SKILLS = [
@@ -18,7 +18,7 @@ const SOFT_SKILLS = [
   },
   {
     title: 'Curiosité',
-    text: 'Un fil rouge technique (l’OCR) revient sur plusieurs de mes projets, simplement parce qu’il m’intéresse.',
+    text: "Chaque projet est l'occasion d'aller un cran plus loin : une API à sécuriser, une logique de jeu découplée de l'UI, une architecture à repenser. J'apprends mieux en bricolant qu'en lisant la doc en entier avant de commencer.",
   },
   {
     title: 'Autonomie',

@@ -23,7 +23,7 @@ const PITCH = [
   },
   {
     label: 'Ma façon de travailler',
-    text: "Je bosse mieux seul, à mon rythme, sans me disperser, même si j'ai déjà fait de l'équipe (Cave à Vin, le jeu de rôle Broken Sunshine). Deux trucs qui reviennent sur mes projets perso : je rethème toujours plutôt que de copier (un démineur devient un antivirus, un Leboncoin devient dédié à la moto), et un sujet technique, l'OCR, revient sans arrêt, juste parce qu'il m'intéresse.",
+    text: "Je bosse mieux seul, à mon rythme, sans me disperser, même si j'ai déjà fait de l'équipe (Cave à Vin, le jeu de rôle Broken Sunshine). Un truc revient sur mes projets perso : je rethème toujours plutôt que de copier un exemple à l'identique, un démineur devient un antivirus, un Leboncoin devient dédié à la moto.",
   },
   {
     label: 'Ce que je vise',
