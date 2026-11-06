@@ -135,7 +135,9 @@ export const projects = [
     category: 'Personnel',
     stack: ['React', 'Vite'],
     blurb: 'Démineur réhabillé en antivirus, jouable au clic comme au tactile.',
-    repo: 'https://github.com/Loic-87/demineur-antivirus',
+    repo: null,
+    noRepoReason: 'Code privé',
+    demo: '/jeux/demineur/',
     image: demineurImage,
     contexte:
       "Projet perso pour m'exercer sur un algorithme classique, le démineur, en le réhabillant dans un univers antivirus : on scanne un système à la recherche de virus plutôt que de mines.",
@@ -156,7 +158,7 @@ export const projects = [
     stack: ['React', 'React Router'],
     blurb: 'Site de petites annonces dédié à la moto, design system sur-mesure (stage).',
     repo: null,
-    noRepoReason: 'Repo à venir',
+    noRepoReason: 'Code privé',
     image: comptoirMotoImage,
     contexte:
       "Projet de stage : un site de petites annonces façon Leboncoin, mais entièrement dédié à la moto. Un choix assumé, parce que je suis motard, pour donner une vraie identité au projet plutôt qu'un clone générique.",
@@ -178,7 +180,7 @@ export const projects = [
     stack: ['JavaScript', 'Three.js', 'WebRTC', 'Node.js'],
     blurb: 'Jeu de motos de lumière façon Tron : vue 3D, IA, multijoueur en ligne et classement.',
     repo: null,
-    noRepoReason: 'Repo à venir',
+    noRepoReason: 'Code privé',
     image: tronImage,
     contexte:
       "Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.",
@@ -199,8 +201,9 @@ export const projects = [
     category: 'Personnel',
     stack: ['JavaScript', 'Canvas 2D', 'CSS3'],
     blurb: 'Tower defense néon en JavaScript pur, jouable directement dans le navigateur, sur PC comme sur mobile.',
-    repo: 'https://github.com/Loic-87/neon-defense',
-    demo: 'https://loic-87.github.io/neon-defense/',
+    repo: null,
+    noRepoReason: 'Code privé',
+    demo: '/jeux/neon-defense/',
     image: neonDefenseImage,
     contexte:
       "Projet perso autour d'un genre que j'aime, le tower defense : on pose des tours le long d'un chemin pour arrêter des vagues d'ennemis. Mené avec un assistant de code IA (Claude Code) : j'ai défini le jeu, les tours, les ennemis et l'équilibrage, le code a été écrit et testé avec l'aide de l'IA.",

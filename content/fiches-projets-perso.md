@@ -5,7 +5,7 @@
 ---
 
 ## Démineur Antivirus
-*Repo : [demineur-antivirus](https://github.com/Loic-87/demineur-antivirus) — React/Vite*
+*Code privé — démo jouable : /jeux/demineur/ — React/Vite*
 
 **Contexte** : Projet personnel pour s'exercer à un algorithme classique (le démineur) en le ré-habillant dans un univers "antivirus" : on scanne un système à la recherche de virus plutôt que de mines.
 
@@ -22,7 +22,7 @@
 ---
 
 ## Le Comptoir de la Moto
-*Repo : à publier — projet réalisé en stage, React/Vite*
+*Code privé — projet réalisé en stage, React/Vite*
 
 **Contexte** : Projet réalisé en stage : un site de petites annonces façon Leboncoin, mais entièrement dédié à la moto — un choix assumé car passionné de moto, pour donner une vraie identité au projet plutôt qu'un clone générique.
 
@@ -39,7 +39,7 @@
 ---
 
 ## TRON Light Cycles
-*Repo : à publier (tron-neon) — JavaScript, Three.js, WebRTC, Node.js/Express*
+*Code privé (repo tron-neon à créer en privé) — JavaScript, Three.js, WebRTC, Node.js/Express*
 
 **Contexte** : Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.
 
@@ -56,7 +56,7 @@
 ---
 
 ## Neon Defense
-*Repo : [neon-defense](https://github.com/Loic-87/neon-defense) — démo jouable : https://loic-87.github.io/neon-defense/ — JavaScript vanilla, Canvas 2D*
+*Code privé — démo jouable : /jeux/neon-defense/ — JavaScript vanilla, Canvas 2D*
 
 **Contexte** : Projet perso autour d'un genre que j'aime, le tower defense : on pose des tours le long d'un chemin pour arrêter des vagues d'ennemis. Mené avec un assistant de code IA (Claude Code) : j'ai défini le jeu, les tours, les ennemis et l'équilibrage, le code a été écrit et testé avec l'aide de l'IA.
 

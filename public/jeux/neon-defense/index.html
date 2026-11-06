@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Defense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <script type="module" crossorigin src="/jeux/neon-defense/assets/index-CspGmuNN.js"></script>
+  <link rel="stylesheet" crossorigin href="/jeux/neon-defense/assets/index-CSxXa7zc.css">
+</head>
+
+<body>
+  <div class="app">
+    <div id="map-select" class="map-select">
+      <div class="map-select-card">
+        <h1 class="game-title">Neon Defense</h1>
+        <h2>Choisis une carte</h2>
+        <div id="map-select-list" class="map-select-list"></div>
+      </div>
+    </div>
+
+    <div id="game-wrapper" class="hidden">
+      <header class="hud">
+        <div class="hud-stats">
+          <div class="stat">
+            <span class="stat-label">Or</span>
+            <span id="gold-value" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Vies</span>
+            <span id="lives-value" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Vague</span>
+            <span id="wave-value" class="stat-value">0 / 0</span>
+          </div>
+        </div>
+        <div class="hud-actions">
+          <button id="start-wave-btn" class="action-btn">Lancer la vague</button>
+          <button id="speed-btn" class="action-btn action-btn-ghost">Vitesse x1</button>
+        </div>
+      </header>
+
+      <main class="board">
+        <canvas id="game-canvas"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <div class="overlay-card">
+            <h2 id="overlay-title"></h2>
+            <p id="overlay-message"></p>
+            <button id="restart-btn" class="action-btn">Rejouer</button>
+          </div>
+        </div>
+      </main>
+
+      <div id="tower-info" class="tower-info hidden">
+        <div class="tower-info-header">
+          <span id="tower-info-name" class="tower-info-name"></span>
+          <span id="tower-info-level" class="tower-info-level"></span>
+        </div>
+        <div id="tower-info-stats" class="tower-info-stats"></div>
+        <div class="tower-info-actions">
+          <button id="upgrade-tower-btn" class="action-btn">Améliorer</button>
+          <button id="sell-tower-btn" class="action-btn action-btn-ghost">Vendre</button>
+        </div>
+      </div>
+
+      <footer class="tower-panel">
+        <button class="tower-btn" data-type="turret">
+          <span class="tower-btn-name"></span>
+          <span class="tower-btn-cost"></span>
+        </button>
+        <button class="tower-btn" data-type="cannon">
+          <span class="tower-btn-name"></span>
+          <span class="tower-btn-cost"></span>
+        </button>
+        <button class="tower-btn" data-type="sniper">
+          <span class="tower-btn-name"></span>
+          <span class="tower-btn-cost"></span>
+        </button>
+        <button class="tower-btn" data-type="gel">
+          <span class="tower-btn-name"></span>
+          <span class="tower-btn-cost"></span>
+        </button>
+        <button class="tower-btn" data-type="mitrailleuse">
+          <span class="tower-btn-name"></span>
+          <span class="tower-btn-cost"></span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -36,6 +36,16 @@ function ProjectCard({ project }) {
           >
             Voir la fiche →
           </Link>
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-text hover:text-primary"
+            >
+              Jouer
+            </a>
+          )}
           {project.repo ? (
             <a
               href={project.repo}
