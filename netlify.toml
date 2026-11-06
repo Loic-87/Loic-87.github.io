@@ -2,6 +2,14 @@
   command = "npm run build"
   publish = "dist"
 
+# Démo Kasa (SPA React compilée dans public/demos/kasa) : ses routes internes
+# (/demos/kasa/about, /demos/kasa/logement/:id) doivent renvoyer SON index.html.
+# Placée avant la règle générale, car Netlify applique la première règle qui correspond.
+[[redirects]]
+  from = "/demos/kasa/*"
+  to = "/demos/kasa/index.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

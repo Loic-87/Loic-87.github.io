@@ -15,6 +15,8 @@ export const projects = [
     stack: ['HTML5', 'CSS3'],
     blurb: "Intégration d'une maquette Figma en HTML/CSS pur, sans JavaScript.",
     repo: 'https://github.com/Loic-87/Booki-mon-projet',
+    demo: 'https://loic-87.github.io/Booki-mon-projet/',
+    demoType: 'site',
     image: bookiImage,
     contexte:
       "Premier projet de la formation : reproduire une maquette Figma à l'identique, en HTML/CSS pur, pour Booki, un site de recherche d'hébergements et d'activités de voyage.",
@@ -56,6 +58,8 @@ export const projects = [
     stack: ['Performance', 'SEO', 'Accessibilité'],
     blurb: "Audit et optimisation perf/SEO/accessibilité d'un site existant.",
     repo: 'https://github.com/Loic-87/mon-projet-Nina-Carducci',
+    demo: 'https://loic-87.github.io/mon-projet-Nina-Carducci/',
+    demoType: 'site',
     image: ninaCarducciImage,
     contexte:
       "Reprendre le site vitrine existant d'une photographe plutôt que de le construire de zéro, pour l'auditer et l'optimiser.",
@@ -95,6 +99,8 @@ export const projects = [
     stack: ['React', 'React Router', 'Sass'],
     blurb: 'SPA de location de logements avec hooks personnalisés.',
     repo: 'https://github.com/Loic-87/Kasa-Mon-projet',
+    demo: '/demos/kasa/',
+    demoType: 'site',
     image: kasaImage,
     contexte:
       'Refonte en Single Page Application React de Kasa, une plateforme de location de logements entre particuliers.',

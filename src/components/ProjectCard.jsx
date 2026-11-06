@@ -43,7 +43,7 @@ function ProjectCard({ project }) {
               rel="noreferrer"
               className="text-sm font-semibold text-text hover:text-primary"
             >
-              Jouer
+              {project.demoType === 'site' ? 'Voir le site' : 'Jouer'}
             </a>
           )}
           {project.repo ? (

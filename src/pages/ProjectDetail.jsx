@@ -92,7 +92,7 @@ function ProjectDetail() {
             rel="noreferrer"
             className="inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
           >
-            Jouer à la démo →
+            {project.demoType === 'site' ? 'Voir le site en ligne →' : 'Jouer à la démo →'}
           </a>
         )}
         {project.repo ? (
