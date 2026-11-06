@@ -84,20 +84,36 @@ function ProjectDetail() {
         ))}
       </div>
 
-      {project.repo ? (
-        <a
-          href={project.repo}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-10 inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
-        >
-          Voir le code sur GitHub →
-        </a>
-      ) : (
-        <p className="mt-10 inline-block rounded-lg border border-highlight/40 bg-highlight/10 px-4 py-2 text-sm font-semibold text-highlight">
-          {project.noRepoReason}
-        </p>
-      )}
+      <div className="mt-10 flex flex-wrap gap-4">
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
+          >
+            Jouer à la démo →
+          </a>
+        )}
+        {project.repo ? (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noreferrer"
+            className={
+              project.demo
+                ? 'inline-block rounded-lg border border-primary/60 px-6 py-3 font-semibold text-primary'
+                : 'inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg'
+            }
+          >
+            Voir le code sur GitHub →
+          </a>
+        ) : (
+          <p className="inline-block rounded-lg border border-highlight/40 bg-highlight/10 px-4 py-2 text-sm font-semibold text-highlight">
+            {project.noRepoReason}
+          </p>
+        )}
+      </div>
     </motion.article>
   )
 }

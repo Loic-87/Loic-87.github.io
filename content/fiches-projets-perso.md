@@ -55,6 +55,23 @@
 
 ---
 
+## Neon Defense
+*Repo : [neon-defense](https://github.com/Loic-87/neon-defense) — démo jouable : https://loic-87.github.io/neon-defense/ — JavaScript vanilla, Canvas 2D*
+
+**Contexte** : Projet perso autour d'un genre que j'aime, le tower defense : on pose des tours le long d'un chemin pour arrêter des vagues d'ennemis. Mené avec un assistant de code IA (Claude Code) : j'ai défini le jeu, les tours, les ennemis et l'équilibrage, le code a été écrit et testé avec l'aide de l'IA.
+
+**Objectifs** : Construire un jeu complet sans framework ni moteur de jeu (boucle de jeu, déplacement des ennemis le long d'un chemin, ciblage des tours, projectiles, économie d'or) et le rendre jouable à la souris comme au doigt.
+
+**Stack technique** : JavaScript ES6+ en modules (classes, sans dépendance), Canvas 2D pour le rendu et les effets néon, CSS3 pour l'interface (HUD, panneaux, responsive), Pointer Events pour la souris et le tactile.
+
+**Compétences développées** : Boucle de jeu avec `requestAnimationFrame` et pas de temps borné, architecture data-driven (ajouter une tour, un ennemi, une vague ou une carte se fait sans toucher au moteur), géométrie (distance à un segment pour savoir où l'on peut construire), conversion des coordonnées écran vers le canevas pour un affichage responsive.
+
+**Résultats et impact** : Jeu complet et jouable en ligne : 5 tours à 3 niveaux, 5 types d'ennemis (armure, régénération, ralentissement), 10 vagues, 2 cartes, vitesse x2, sur PC et mobile.
+
+**Perspectives d'amélioration** : Nouvelles cartes, un boss, un aperçu de la prochaine vague, des effets sonores et la sauvegarde du meilleur score.
+
+---
+
 ## Notes
 - Comptoir de la Moto n'a pas encore de repo GitHub (code existe en local, pas encore versionné) — lien à ajouter une fois le repo créé et poussé.
 - Menu Maker (projet OCR) : repo introuvable pour l'instant, en attente.
