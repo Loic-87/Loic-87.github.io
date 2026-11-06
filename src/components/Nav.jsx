@@ -14,10 +14,10 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-bg/90 backdrop-blur">
+    <header className="fixed top-0 left-0 z-50 w-full">
       <nav
         aria-label="Navigation principale"
-        className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-5xl items-center justify-between border-b border-white/10 bg-bg/90 px-6 py-4 backdrop-blur"
       >
         <a href="/#accueil" className="font-display text-lg font-bold">
           Loïc Le Faucheur
@@ -58,7 +58,7 @@ function Nav() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col gap-4 overflow-hidden px-6 pb-6 md:hidden"
+            className="flex flex-col gap-4 overflow-hidden bg-bg px-6 pb-6 md:hidden"
           >
             {LINKS.map((link) => (
               <li key={link.href}>
