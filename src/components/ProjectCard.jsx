@@ -5,7 +5,7 @@ import { getDemoLabels } from "../data/projects";
 
 function ProjectCard({ project }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-bg-elevated transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
+    <article className="relative flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-bg-elevated transition-all duration-200 hover:-translate-y-1 hover:border-primary/40">
       {project.image && (
         <img
           src={project.image}
@@ -33,7 +33,7 @@ function ProjectCard({ project }) {
         <div className="mt-auto flex items-center gap-4 pt-2">
           <Link
             to={`/projets/${project.slug}`}
-            className="text-sm font-semibold text-primary-strong hover:underline"
+            className="text-sm font-semibold text-primary-strong after:absolute after:inset-0 hover:underline"
           >
             Voir la fiche →
           </Link>
@@ -42,7 +42,7 @@ function ProjectCard({ project }) {
               href={project.demo}
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-semibold text-text hover:text-primary"
+              className="relative z-10 text-sm font-semibold text-text hover:text-primary"
             >
               {getDemoLabels(project).short}
             </a>
@@ -52,7 +52,7 @@ function ProjectCard({ project }) {
               href={project.video}
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-semibold text-text hover:text-primary"
+              className="relative z-10 text-sm font-semibold text-text hover:text-primary"
             >
               Vidéo
             </a>
@@ -62,7 +62,7 @@ function ProjectCard({ project }) {
               href={project.repo}
               target="_blank"
               rel="noreferrer"
-              className="text-sm text-text-muted hover:text-primary"
+              className="relative z-10 text-sm text-text-muted hover:text-primary"
             >
               Code
             </a>
