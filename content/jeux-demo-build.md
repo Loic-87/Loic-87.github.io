@@ -45,3 +45,14 @@ Attention : le dossier local `C:\Users\oprob\dev\kasa` a divergé du repo GitHub
 
 - Booki : https://loic-87.github.io/Booki-mon-projet/
 - Nina Carducci : https://loic-87.github.io/mon-projet-Nina-Carducci/
+
+## Démo Sophie Bluel (front en ligne, API simulée)
+
+Le site a besoin du back-end OpenClassrooms (Node/Express + SQLite), qui n'est pas hébergé. La démo `/demos/sophie-bluel/` est donc le dossier `FrontEnd/` du repo, dans lequel **seul `assets/JS/api.js` est remplacé** par une version qui simule l'API : mêmes fonctions exportées, mêmes formats de réponse. `index.js` et `login.js` sont identiques à l'original.
+
+- Données de départ : les 11 travaux et 3 catégories fournis par OpenClassrooms.
+- Connexion admin : `sophie.bluel@test.tld` / `S0phie` (les identifiants de démo publics du README OpenClassrooms). Un bandeau les affiche en bas de page.
+- Ajouts et suppressions sont gardés dans `sessionStorage` (jusqu'à la fermeture de l'onglet). Rien n'est envoyé nulle part.
+- Les photos ont été converties en JPEG 1000 px max (12 Mo → 1 Mo) ; les chemins dans `api.js` et `index.html` pointent vers les `.jpg`.
+
+Pour mettre à jour : recopier `FrontEnd/` du repo dans `public/demos/sophie-bluel/`, puis remettre le `api.js` simulé (celui actuellement dans `public/demos/sophie-bluel/assets/JS/api.js` — le sauvegarder avant) et reconvertir les images.

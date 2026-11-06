@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { getProjectBySlug } from '../data/projects'
+import { getProjectBySlug, getDemoLabels } from '../data/projects'
 import TechTag from '../components/TechTag'
 import CategoryBadge from '../components/CategoryBadge'
 
@@ -92,7 +92,17 @@ function ProjectDetail() {
             rel="noreferrer"
             className="inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
           >
-            {project.demoType === 'site' ? 'Voir le site en ligne →' : 'Jouer à la démo →'}
+            {getDemoLabels(project).long}
+          </a>
+        )}
+        {project.video && (
+          <a
+            href={project.video}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg"
+          >
+            Voir la vidéo de démo →
           </a>
         )}
         {project.repo ? (
@@ -101,7 +111,7 @@ function ProjectDetail() {
             target="_blank"
             rel="noreferrer"
             className={
-              project.demo
+              project.demo || project.video
                 ? 'inline-block rounded-lg border border-primary/60 px-6 py-3 font-semibold text-primary'
                 : 'inline-block rounded-lg bg-primary px-6 py-3 font-semibold text-bg'
             }

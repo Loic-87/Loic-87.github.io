@@ -1,0 +1,669 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ===================== BASE ===================== */
+body {
+  font-family: "Work Sans";
+  font-size: 14px;
+}
+
+/* ===================== MAIN ===================== */
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===================== HEADER ===================== */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 50px 0;
+  padding: 30px 200px 30px;
+}
+
+header.admin {
+  padding-top: 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+
+h1 > span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav li {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+li:hover {
+  color: #b1663c;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===================== BARRE ADMIN ===================== */
+.edit-bar {
+  display: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: calc(100% + 400px);
+  margin: 0 -200px 30px;
+}
+
+.edit-bar.visible {
+  display: block;
+}
+
+/* ===================== SECTIONS ===================== */
+section {
+  margin: 50px 0;
+}
+
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+
+/* ===================== INTRODUCTION ===================== */
+.introduction {
+  display: flex;
+  align-items: center;
+}
+
+.introduction figure {
+  flex: 1;
+}
+
+.introduction img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.introduction article {
+  flex: 1;
+}
+
+.introduction h2 {
+  margin-bottom: 1em;
+}
+
+.introduction p {
+  margin-bottom: 0.5em;
+}
+
+/* ===================== PORTFOLIO ===================== */
+.portfolio h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+/* ===================== FILTRES ===================== */
+.filters {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.filters.hidden {
+  display: none;
+}
+
+.filters li {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #1d6154;
+  border-radius: 50px;
+  color: #1d6154;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.filters li:hover {
+  background-color: #1d6154;
+  color: white;
+}
+
+.filters li.active-filter {
+  background-color: #1d6154;
+  color: white;
+}
+
+/* ===================== BOUTON MODIFIER ===================== */
+.edit-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  position: absolute;
+  left: calc(50% + 120px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.edit-btn.visible {
+  display: block;
+}
+
+/* ===================== CONTACT ===================== */
+.contact {
+  width: 50%;
+  margin: auto;
+}
+
+.contact > * {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.contact label {
+  margin: 2em 0 1em 0;
+}
+
+.contact textarea {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+}
+
+/* ===================== MODAL ===================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  background: white;
+  border: none;
+  padding: 5px;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+.modal-gallery figure {
+  position: relative;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  z-index: 1;
+}
+
+.add-work-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 30px;
+  background-color: #1d6154;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Syne";
+  font-weight: 700;
+}
+
+.modal-view-form {
+  display: none;
+}
+
+.modal-view-form.open {
+  display: block;
+}
+
+.modal-view-gallery.hidden {
+  display: none;
+}
+
+.modal-view-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+/* ===================== FORMULAIRE AJOUT ===================== */
+.upload-zone {
+  background-color: #f0f4f8;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.upload-zone.hidden {
+  display: none;
+}
+
+.upload-zone i {
+  font-size: 50px;
+  color: #b0b8c1;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.upload-zone label {
+  background-color: #d3dce6;
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.upload-zone p {
+  color: #888;
+  font-size: 12px;
+}
+
+.add-work-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.add-work-form input[type="text"],
+.add-work-form select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  margin-bottom: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.add-work-form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 30px;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Syne";
+  font-weight: 700;
+  width: 180px;
+}
+
+.add-work-form input[type="submit"].active {
+  background-color: #1d6154;
+}
+
+#work-image {
+  display: none;
+}
+
+.preview-image {
+  display: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.preview-image.visible {
+  display: block;
+}
+
+/* ===================== LOGIN ===================== */
+.login {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.login h2 {
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #888;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  height: 40px;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.login-form input[type="submit"] {
+  background-color: #1d6154;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-family: "Syne";
+  font-weight: 700;
+  width: 180px;
+  margin: 10px auto;
+}
+
+.login-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.login-nav:hover {
+  cursor: pointer;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+  color: #1d6154;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.nav-projets:hover,
+.nav-contact:hover,
+.nav-login:hover {
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message.visible {
+  display: block;
+}
+
+/* ===================== FOOTER ===================== */
+footer nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
+}
+
+footer {
+  text-align: right;
+  padding-right: 216px;
+  width: 1440px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}

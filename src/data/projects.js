@@ -37,6 +37,8 @@ export const projects = [
     stack: ['JavaScript', 'API REST'],
     blurb: 'Galerie dynamique avec mode édition protégé par authentification.',
     repo: 'https://github.com/Loic-87/Mon-projet-Sophie-Bluel',
+    demo: '/demos/sophie-bluel/',
+    demoType: 'simulated',
     image: sophieBluelImage,
     contexte:
       "Portfolio en ligne pour une architecte d'intérieur fictive, avec une interface d'admin pour ajouter ou supprimer des réalisations sans toucher au code.",
@@ -225,6 +227,20 @@ export const projects = [
       'Nouvelles cartes, un boss, un aperçu de la prochaine vague, des effets sonores et la sauvegarde du meilleur score.',
   },
 ]
+
+// Libellés des liens de démo selon leur type :
+// - 'site'      : le vrai site en ligne
+// - 'simulated' : le front en ligne, avec une API simulée dans le navigateur (pas de back-end)
+// - par défaut  : un jeu jouable
+const DEMO_LABELS = {
+  site: { short: 'Voir le site', long: 'Voir le site en ligne →' },
+  simulated: { short: 'Voir la démo', long: 'Voir la démo (données simulées) →' },
+  game: { short: 'Jouer', long: 'Jouer à la démo →' },
+}
+
+export function getDemoLabels(project) {
+  return DEMO_LABELS[project.demoType] ?? DEMO_LABELS.game
+}
 
 export function getProjectBySlug(slug) {
   return projects.find((project) => project.slug === slug)

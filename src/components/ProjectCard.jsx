@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import TechTag from "./TechTag";
 import CategoryBadge from "./CategoryBadge";
+import { getDemoLabels } from "../data/projects";
 
 function ProjectCard({ project }) {
   return (
@@ -43,7 +44,17 @@ function ProjectCard({ project }) {
               rel="noreferrer"
               className="text-sm font-semibold text-text hover:text-primary"
             >
-              {project.demoType === 'site' ? 'Voir le site' : 'Jouer'}
+              {getDemoLabels(project).short}
+            </a>
+          )}
+          {project.video && (
+            <a
+              href={project.video}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-text hover:text-primary"
+            >
+              Vidéo
             </a>
           )}
           {project.repo ? (
