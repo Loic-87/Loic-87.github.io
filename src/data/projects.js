@@ -189,6 +189,7 @@ export const projects = [
     blurb: 'Jeu de motos de lumière façon Tron : vue 3D, IA, multijoueur en ligne et classement.',
     repo: null,
     noRepoReason: 'Code privé',
+    demo: '/jeux/tron/',
     image: tronImage,
     contexte:
       "Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.",
