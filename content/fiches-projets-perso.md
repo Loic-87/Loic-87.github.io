@@ -38,10 +38,10 @@
 
 ---
 
-## TRON Light Cycles
+## Laser Riders
 *Code privé (repo tron-neon à créer en privé) — JavaScript, Three.js, WebRTC, Node.js/Express*
 
-**Contexte** : Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.
+**Contexte** : Jeu d'arcade perso : chaque moto laisse un mur laser derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.
 
 **Objectifs** : Aller au-delà d'un simple jeu solo : trois vues (2D, 3D, poursuite), une IA, un tournoi, un éditeur de circuits, puis un vrai mode multijoueur en ligne entre amis avec un classement qu'on ne peut pas truquer seul.
 

@@ -4,7 +4,7 @@ import ninaCarducciImage from '../assets/projects/nina-carducci.jpg'
 import kasaImage from '../assets/projects/kasa.jpg'
 import demineurImage from '../assets/projects/demineur-antivirus.jpg'
 import comptoirMotoImage from '../assets/projects/comptoir-de-la-moto.jpg'
-import tronImage from '../assets/projects/tron.jpg'
+import laserRidersImage from '../assets/projects/laser-riders.jpg'
 import neonDefenseImage from '../assets/projects/neon-defense.jpg'
 
 export const projects = [
@@ -182,17 +182,17 @@ export const projects = [
       "Un backend Node.js pour persister les annonces et les comptes, l'authentification, et une fonctionnalité d'OCR pour scanner la carte grise et pré-remplir une annonce automatiquement.",
   },
   {
-    slug: 'tron',
-    title: 'TRON Light Cycles',
+    slug: 'laser-riders',
+    title: 'Laser Riders',
     category: 'Personnel',
     stack: ['JavaScript', 'Three.js', 'WebRTC', 'Node.js'],
-    blurb: 'Jeu de motos de lumière façon Tron : vue 3D, IA, multijoueur en ligne et classement.',
+    blurb: 'Jeu d’arcade de motos laser : vue 3D, IA, multijoueur en ligne et classement.',
     repo: null,
     noRepoReason: 'Code privé',
-    demo: '/jeux/tron/',
-    image: tronImage,
+    demo: '/jeux/laser-riders/',
+    image: laserRidersImage,
     contexte:
-      "Projet perso inspiré du film Tron : chaque moto laisse un mur de lumière derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.",
+      "Jeu d'arcade perso : chaque moto laisse un mur laser derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.",
     objectifs:
       "Aller au-delà d'un simple jeu solo : trois vues (2D, 3D, poursuite), une IA, un tournoi, un éditeur de circuits, puis un vrai mode multijoueur en ligne entre amis avec un classement qu'on ne peut pas truquer seul.",
     stackDetail:

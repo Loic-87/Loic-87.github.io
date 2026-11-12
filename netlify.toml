@@ -10,6 +10,18 @@
   to = "/demos/kasa/index.html"
   status = 200
 
+# Anciennes adresses du jeu avant son renommage TRON → Laser Riders (12/11/2026),
+# pour que les liens déjà partagés mènent toujours au jeu.
+[[redirects]]
+  from = "/jeux/tron/*"
+  to = "/jeux/laser-riders/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/projets/tron"
+  to = "/projets/laser-riders"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

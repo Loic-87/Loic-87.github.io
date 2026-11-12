@@ -6,7 +6,7 @@ Les repos des projets perso sont privés. Pour que les jeux restent jouables, le
 | --- | --- | --- |
 | Neon Defense | `/jeux/neon-defense/` | `C:\Users\oprob\dev\neon-defense` |
 | Démineur Antivirus | `/jeux/demineur/` | `C:\Users\oprob\dev\demineur-antivirus` |
-| TRON Light Cycles | `/jeux/tron/` | `C:\Users\p c\Desktop\codage\tron` (dépôt `tron-neon` à créer) |
+| Laser Riders (ex-TRON) | `/jeux/laser-riders/` | `C:\Users\p c\Desktop\codage\tron` (dépôt `tron-neon` à créer) |
 
 Rappel : le JavaScript d'un jeu web est toujours téléchargé par le navigateur. La minification le rend illisible en pratique, mais ne le cache pas complètement. Ce qui reste privé, c'est le code source propre (commentaires, structure, historique Git).
 
@@ -26,9 +26,11 @@ npx vite build --base=/jeux/demineur/ --outDir "C:\Users\oprob\OneDrive\Bureau\t
 
 Ne jamais activer les source maps (`build.sourcemap`) : elles permettraient de retrouver le code d'origine.
 
-### TRON Light Cycles
+### Laser Riders (ex-TRON Light Cycles)
 
-Le jeu tient dans un seul `index.html` (pas de Vite). Son script `build-demo.mjs` minifie le JS et le CSS avec les outils du portfolio (rolldown et lightningcss, fournis avec Vite) et écrit la démo dans `public/jeux/tron/`, avec un `config.js` qui désactive le classement en ligne (le serveur n'est pas encore hébergé : la démo l'indique au lieu d'essayer de s'y connecter). Le multijoueur en ligne entre amis fonctionne quand même.
+Renommé le 12/11/2026 : « TRON » et « Light Cycles » sont des marques de Disney. Dans la démo publiée, seuls le `<title>`, le `<h1>` et le sous-titre ont été changés à la main (« LASER » / « RIDERS »), ainsi que le mode de murs « LEGACY » (clin d'œil à *Tron: Legacy*) devenu « MIRAGE » (bouton, aide et étapes du tournoi). **À faire sur le PC akuma avant le prochain build** : faire les mêmes changements dans le source (`index.html` : `<title>`, `<h1>`, `.sub`, libellés « LEGACY ») et passer le dossier de sortie de `build-demo.mjs` à `public/jeux/laser-riders/`, sinon le build recréera `public/jeux/tron/` avec l'ancien nom. Les noms internes (clés `tron-*` du localStorage, `TRON_SERVER`) ne s'affichent nulle part et peuvent rester.
+
+Le jeu tient dans un seul `index.html` (pas de Vite). Son script `build-demo.mjs` minifie le JS et le CSS avec les outils du portfolio (rolldown et lightningcss, fournis avec Vite) et écrit la démo dans `public/jeux/laser-riders/` (encore `tron/` dans le script actuel), avec un `config.js` qui désactive le classement en ligne (le serveur n'est pas encore hébergé : la démo l'indique au lieu d'essayer de s'y connecter). Le multijoueur en ligne entre amis fonctionne quand même.
 
 ```powershell
 cd "C:\Users\p c\Desktop\codage\tron"

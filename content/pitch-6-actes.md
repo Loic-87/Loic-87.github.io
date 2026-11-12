@@ -22,7 +22,7 @@ Je travaille principalement avec **React** et **Vite** côté front-end, avec Sa
 
 Le projet dont je suis le plus fier est **Le Comptoir de la Moto**, réalisé en stage : un site d'annonces dédié à la moto, un sujet qui me parle en tant que motard. J'y ai construit un design system complet de A à Z (palette, typographie, composants) et toute l'arborescence du site. C'est aussi le projet où mes trois passions se rejoignent le plus naturellement : la moto, le code, et — à travers l'envie de continuer à l'enrichir (OCR de carte grise, backend) — le goût du jeu et du défi technique qui vient de ma passion pour le gaming.
 
-*(Tu as aussi mentionné un jeu Tron comme projet qui te tient à cœur — si on arrive à le committer/pousser, on pourra l'ajouter ici ou en second projet marquant, vu qu'il incarne direct le lien jeu vidéo + code.)*
+*(Tu as aussi mentionné un jeu de motos laser (Laser Riders, ex-Tron) comme projet qui te tient à cœur — si on arrive à le committer/pousser, on pourra l'ajouter ici ou en second projet marquant, vu qu'il incarne direct le lien jeu vidéo + code.)*
 
 ### 5. Approche et différenciation
 
@@ -35,7 +35,7 @@ Je recherche aujourd'hui un poste de développeur **full-stack**, idéalement da
 ---
 
 ## À trancher avec toi
-- Acte 4 : garder Comptoir Moto seul, ou mentionner Tron si on le récupère à temps
+- Acte 4 : garder Comptoir Moto seul, ou mentionner Laser Riders si on le récupère à temps
 
 ## Décidé
 - Broken Sunshine : pas de fiche projet (pas de code), mais entrée dans la section secondaire "Hobbies tech" — voir `content/hobbies-tech.md`
