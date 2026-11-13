@@ -1,41 +1,22 @@
 # Démos des jeux (code privé)
 
-Les repos des projets perso sont privés. Pour que les jeux restent jouables, leur version **compilée et minifiée** est copiée dans `public/jeux/` et publiée avec le portfolio sur Netlify :
+Depuis le 12/11/2026, les jeux perso ne sont plus dans le portfolio : **chaque jeu a son propre repo GitHub privé et son propre site Netlify**, pour qu'aucune adresse de jeu ne contienne mon nom. Le portfolio garde les fiches projet et leur bouton « Jouer », qui pointe vers le site du jeu. Les anciennes adresses du portfolio (`/jeux/...` et les anciens slugs de fiches) redirigent vers les nouvelles (`netlify.toml`).
 
-| Jeu | Adresse | Repo (privé) |
-| --- | --- | --- |
-| Neon Defense | `/jeux/neon-defense/` | `C:\Users\oprob\dev\neon-defense` |
-| Démineur Antivirus | `/jeux/demineur/` | `C:\Users\oprob\dev\demineur-antivirus` |
-| Laser Riders (ex-TRON) | `/jeux/laser-riders/` | `C:\Users\p c\Desktop\codage\tron` (dépôt `tron-neon` à créer) |
+Les jeux ont aussi changé de nom (12-13/11/2026) pour des noms inventés : TRON (marque Disney) → **PixelBiker**, Neon Defense → **Stratigon**, Démineur Antivirus → **Quarantix**.
 
-Rappel : le JavaScript d'un jeu web est toujours téléchargé par le navigateur. La minification le rend illisible en pratique, mais ne le cache pas complètement. Ce qui reste privé, c'est le code source propre (commentaires, structure, historique Git).
+| Jeu | Site Netlify | Repo GitHub (privé) | Dossier local | Comment Netlify le publie |
+| --- | --- | --- | --- | --- |
+| PixelBiker (ex-TRON) | https://pixelbiker.netlify.app | `Loic-87/pixelbiker` (ex-`tron-neon`) | `C:\Users\oprob\dev\tron-neon` ; akuma `C:\Users\p c\Desktop\codage\tron` | `npm run build` (`build-demo.mjs` : rolldown + lightningcss), publie `dist/` |
+| Stratigon (ex-Neon Defense) | https://stratigon.netlify.app | `Loic-87/neon-defense` (à renommer `stratigon`) | `C:\Users\oprob\dev\neon-defense` | `npm run build` (Vite), publie `dist/` |
+| Quarantix (ex-Démineur Antivirus) | https://quarantix.netlify.app | `Loic-87/demineur-antivirus` (à renommer `quarantix`) | `C:\Users\oprob\dev\demineur-antivirus` | `npm run build` (Vite), publie `dist/` |
 
-## Mettre à jour une démo après une modification du jeu
+Mettre à jour un jeu = commit + push dans son repo : Netlify recompile et republie tout seul. Rien à faire dans le portfolio.
 
-Depuis le dossier du portfolio (PowerShell), puis commit + push du portfolio :
+Rappel : le JavaScript d'un jeu web est toujours téléchargé par le navigateur. La minification le rend illisible en pratique, mais ne le cache pas complètement. Ce qui reste privé, c'est le code source propre (commentaires, structure, historique Git). Ne jamais activer les source maps (`build.sourcemap`).
 
-```powershell
-# Neon Defense (pas de Vite dans le jeu : on utilise celui du portfolio)
-cd C:\Users\oprob\dev\neon-defense
-node "C:\Users\oprob\OneDrive\Bureau\test portfolio\Loic-87.github.io\node_modules\vite\bin\vite.js" build . --base=/jeux/neon-defense/ --outDir "C:\Users\oprob\OneDrive\Bureau\test portfolio\Loic-87.github.io\public\jeux\neon-defense" --emptyOutDir
+### PixelBiker (ex-TRON Light Cycles)
 
-# Démineur Antivirus
-cd C:\Users\oprob\dev\demineur-antivirus
-npx vite build --base=/jeux/demineur/ --outDir "C:\Users\oprob\OneDrive\Bureau\test portfolio\Loic-87.github.io\public\jeux\demineur" --emptyOutDir
-```
-
-Ne jamais activer les source maps (`build.sourcemap`) : elles permettraient de retrouver le code d'origine.
-
-### Laser Riders (ex-TRON Light Cycles)
-
-Renommé le 12/11/2026 : « TRON » et « Light Cycles » sont des marques de Disney. Dans la démo publiée, seuls le `<title>`, le `<h1>` et le sous-titre ont été changés à la main (« LASER » / « RIDERS »), ainsi que le mode de murs « LEGACY » (clin d'œil à *Tron: Legacy*) devenu « MIRAGE » (bouton, aide et étapes du tournoi). **À faire sur le PC akuma avant le prochain build** : faire les mêmes changements dans le source (`index.html` : `<title>`, `<h1>`, `.sub`, libellés « LEGACY ») et passer le dossier de sortie de `build-demo.mjs` à `public/jeux/laser-riders/`, sinon le build recréera `public/jeux/tron/` avec l'ancien nom. Les noms internes (clés `tron-*` du localStorage, `TRON_SERVER`) ne s'affichent nulle part et peuvent rester.
-
-Le jeu tient dans un seul `index.html` (pas de Vite). Son script `build-demo.mjs` minifie le JS et le CSS avec les outils du portfolio (rolldown et lightningcss, fournis avec Vite) et écrit la démo dans `public/jeux/laser-riders/` (encore `tron/` dans le script actuel), avec un `config.js` qui désactive le classement en ligne (le serveur n'est pas encore hébergé : la démo l'indique au lieu d'essayer de s'y connecter). Le multijoueur en ligne entre amis fonctionne quand même.
-
-```powershell
-cd "C:\Users\p c\Desktop\codage\tron"
-node build-demo.mjs "C:\Users\p c\Desktop\codage\portfolio"
-```
+« TRON » et « Light Cycles » sont des marques de Disney : le jeu a été renommé dans le code source (titre « PixelBiker », écran d'accueil « PIXEL » / « BIKER »), et le mode de murs « LEGACY » (clin d'œil à *Tron: Legacy*) est devenu « MIRAGE ». Les noms internes (clés `tron-*` du localStorage, `TRON_SERVER`) ne s'affichent nulle part et restent tels quels. Sur le PC akuma, faire un `git pull` avant de retoucher le jeu.
 
 ## Démo Kasa (repo public, site compilé dans le portfolio)
 

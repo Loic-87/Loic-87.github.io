@@ -10,16 +10,47 @@
   to = "/demos/kasa/index.html"
   status = 200
 
-# Anciennes adresses du jeu avant son renommage TRON → Laser Riders (12/11/2026),
-# pour que les liens déjà partagés mènent toujours au jeu.
+# Chaque jeu a déménagé sur son propre site Netlify et a changé de nom (12-13/11/2026) :
+# TRON → Laser Riders → PixelBiker, Neon Defense → Stratigon, Démineur Antivirus → Quarantix.
+# Les anciens liens du portfolio mènent toujours au bon endroit.
 [[redirects]]
   from = "/jeux/tron/*"
-  to = "/jeux/laser-riders/:splat"
+  to = "https://pixelbiker.netlify.app/"
+  status = 301
+
+[[redirects]]
+  from = "/jeux/laser-riders/*"
+  to = "https://pixelbiker.netlify.app/"
+  status = 301
+
+[[redirects]]
+  from = "/jeux/neon-defense/*"
+  to = "https://stratigon.netlify.app/"
+  status = 301
+
+[[redirects]]
+  from = "/jeux/demineur/*"
+  to = "https://quarantix.netlify.app/"
   status = 301
 
 [[redirects]]
   from = "/projets/tron"
-  to = "/projets/laser-riders"
+  to = "/projets/pixelbiker"
+  status = 301
+
+[[redirects]]
+  from = "/projets/laser-riders"
+  to = "/projets/pixelbiker"
+  status = 301
+
+[[redirects]]
+  from = "/projets/neon-defense"
+  to = "/projets/stratigon"
+  status = 301
+
+[[redirects]]
+  from = "/projets/demineur-antivirus"
+  to = "/projets/quarantix"
   status = 301
 
 [[redirects]]

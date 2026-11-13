@@ -2,10 +2,10 @@ import bookiImage from '../assets/projects/booki.jpg'
 import sophieBluelImage from '../assets/projects/sophie-bluel.jpg'
 import ninaCarducciImage from '../assets/projects/nina-carducci.jpg'
 import kasaImage from '../assets/projects/kasa.jpg'
-import demineurImage from '../assets/projects/demineur-antivirus.jpg'
+import quarantixImage from '../assets/projects/quarantix.jpg'
 import comptoirMotoImage from '../assets/projects/comptoir-de-la-moto.jpg'
-import laserRidersImage from '../assets/projects/laser-riders.jpg'
-import neonDefenseImage from '../assets/projects/neon-defense.jpg'
+import pixelbikerImage from '../assets/projects/pixelbiker.jpg'
+import stratigonImage from '../assets/projects/stratigon.jpg'
 
 export const projects = [
   {
@@ -138,15 +138,15 @@ export const projects = [
       "Mettre ce travail de conception à l'épreuve en développant réellement une partie du Menu Maker.",
   },
   {
-    slug: 'demineur-antivirus',
-    title: 'Démineur Antivirus',
+    slug: 'quarantix',
+    title: 'Quarantix',
     category: 'Personnel',
     stack: ['React', 'Vite'],
     blurb: 'Démineur réhabillé en antivirus, jouable au clic comme au tactile.',
     repo: null,
     noRepoReason: 'Code privé',
-    demo: '/jeux/demineur/',
-    image: demineurImage,
+    demo: 'https://quarantix.netlify.app/',
+    image: quarantixImage,
     contexte:
       "Projet perso pour m'exercer sur un algorithme classique, le démineur, en le réhabillant dans un univers antivirus : on scanne un système à la recherche de virus plutôt que de mines.",
     objectifs:
@@ -182,15 +182,15 @@ export const projects = [
       "Un backend Node.js pour persister les annonces et les comptes, l'authentification, et une fonctionnalité d'OCR pour scanner la carte grise et pré-remplir une annonce automatiquement.",
   },
   {
-    slug: 'laser-riders',
-    title: 'Laser Riders',
+    slug: 'pixelbiker',
+    title: 'PixelBiker',
     category: 'Personnel',
     stack: ['JavaScript', 'Three.js', 'WebRTC', 'Node.js'],
     blurb: 'Jeu d’arcade de motos laser : vue 3D, IA, multijoueur en ligne et classement.',
     repo: null,
     noRepoReason: 'Code privé',
-    demo: '/jeux/laser-riders/',
-    image: laserRidersImage,
+    demo: 'https://pixelbiker.netlify.app/',
+    image: pixelbikerImage,
     contexte:
       "Jeu d'arcade perso : chaque moto laisse un mur laser derrière elle, le dernier survivant gagne. Mené avec un assistant de code IA (Claude Code) : j'ai imaginé le jeu, décidé de chaque fonctionnalité et fait les choix de conception, le code a été écrit et testé avec l'aide de l'IA.",
     objectifs:
@@ -205,15 +205,15 @@ export const projects = [
       "Mettre le jeu et le serveur en ligne (Render + Neon), ajouter de vrais comptes joueurs, et des tests automatisés pour l'API.",
   },
   {
-    slug: 'neon-defense',
-    title: 'Neon Defense',
+    slug: 'stratigon',
+    title: 'Stratigon',
     category: 'Personnel',
     stack: ['JavaScript', 'Canvas 2D', 'CSS3'],
     blurb: 'Tower defense néon en JavaScript pur, jouable directement dans le navigateur, sur PC comme sur mobile.',
     repo: null,
     noRepoReason: 'Code privé',
-    demo: '/jeux/neon-defense/',
-    image: neonDefenseImage,
+    demo: 'https://stratigon.netlify.app/',
+    image: stratigonImage,
     contexte:
       "Projet perso autour d'un genre que j'aime, le tower defense : on pose des tours le long d'un chemin pour arrêter des vagues d'ennemis. Mené avec un assistant de code IA (Claude Code) : j'ai défini le jeu, les tours, les ennemis et l'équilibrage, le code a été écrit et testé avec l'aide de l'IA.",
     objectifs:
